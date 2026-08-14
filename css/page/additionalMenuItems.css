@@ -1,0 +1,256 @@
+.ropro-nav-force-open{
+	visibility:visible !important;
+	transform:none !important;
+}
+.ropro-nav-force-closed{
+	visibility:hidden !important;
+	transform:translateX(-100%) !important;
+}
+
+.ropro-sidebar-icon{
+	display:inline-block;
+	width:24px;
+	height:24px;
+	background-repeat:no-repeat;
+	background-size:24px 24px;
+	background-position:center;
+	vertical-align:middle;
+}
+
+.sandbox-icon .ropro-sidebar-item-label,
+.offers-icon .ropro-sidebar-item-label,
+.themes-icon .ropro-sidebar-item-label{
+	padding-left:2px;
+}
+
+.light-theme .sandbox-icon .new-menu-icon{
+	background-position: 0px 0px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/sandbox_icon_lightmode_inactive.svg);
+}
+.light-theme .sandbox-icon:hover .new-menu-icon{
+	background-position: 0px 0px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/sandbox_icon_lightmode_active.svg);
+}
+
+.light-theme .offers-icon .new-menu-icon{
+	background-position: 0px 0px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/trade_offers_icon_lightmode_inactive.svg);
+}
+.light-theme .offers-icon:hover .new-menu-icon{
+	background-position: 0px 0px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/trade_offers_icon_lightmode_active.svg);
+}
+
+.offers-icon.ropro-menu-item-locked{
+	opacity: 0.62;
+}
+
+.offers-icon.ropro-menu-item-locked .new-menu-icon{
+	filter: grayscale(1) saturate(0.18) brightness(1.05);
+}
+
+.offers-icon.ropro-menu-item-locked .dynamic-ellipsis-item::after,
+.offers-icon.ropro-menu-item-locked .ropro-sidebar-item-label::after{
+	content: " \1F512";
+	font-size: 11px;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+.light-theme .offers-icon.ropro-menu-item-locked .dynamic-ellipsis-item,
+.light-theme .offers-icon.ropro-menu-item-locked .ropro-sidebar-item-label{
+	color: #798491 !important;
+}
+
+.light-theme .offers-icon.ropro-menu-item-locked:hover .new-menu-icon{
+	background-position: 0px 0px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/trade_offers_icon_lightmode_inactive.svg);
+}
+.light-theme .themes-icon .new-menu-icon{
+	background-position: 1px 2px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/themes_icon_lightmode_inactive.svg);
+}
+
+.light-theme .themes-icon:hover .new-menu-icon{
+	background-position: 1px 2px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/themes_icon_lightmode_active.svg);
+}
+.dark-theme .sandbox-icon .new-menu-icon{
+	background-position: 0px 0px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/sandbox_icon_darkmode_inactive.svg);
+}
+.dark-theme .sandbox-icon:hover .new-menu-icon{
+	background-position: 0px 0px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/sandbox_icon_darkmode_active.svg);
+}
+.dark-theme .offers-icon .new-menu-icon{
+	background-position: 0px 0px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/trade_offers_icon_darkmode_inactive.svg);
+}
+.dark-theme .offers-icon:hover .new-menu-icon{
+	background-position: 0px 0px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/trade_offers_icon_darkmode_active.svg);
+}
+
+.dark-theme .offers-icon.ropro-menu-item-locked .dynamic-ellipsis-item,
+.dark-theme .offers-icon.ropro-menu-item-locked .ropro-sidebar-item-label{
+	color: #a6afba !important;
+}
+
+.dark-theme .offers-icon.ropro-menu-item-locked:hover .new-menu-icon{
+	background-position: 0px 0px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/trade_offers_icon_darkmode_inactive.svg);
+}
+.dark-theme .themes-icon .new-menu-icon{
+	background-position: 1px 2px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/themes_icon_darkmode_inactive.svg);
+}
+
+.dark-theme .themes-icon:hover .new-menu-icon{
+	background-position: 1px 2px;
+	background-image:url(chrome-extension://__MSG_@@extension_id__/images/themes_icon_darkmode_active.svg);
+}
+
+.ropro-icon {
+	margin-top:6px;
+	margin-left:0px;
+	width:30px;
+}
+
+.ropro-icon:hover {
+	cursor: pointer;
+}
+
+.dark-theme .ropro-icon:hover {
+    border:2px solid white;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+.light-theme .ropro-icon:hover {
+    border:2px solid black;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+  /* Tooltip text */
+  .buttontooltip .tooltiptext {
+    visibility: hidden;
+    width: 260px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .buttontooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .alert-close:hover {
+    opacity: 1!important;
+  }
+  
+.ropro-cloud-play-activated .game-server-join-btn {
+  background-color:#0085DE!important;
+  color:white!important;
+  border:none;
+}
+
+.ropro-cloud-play-activated .create-server-link {
+  background-color:#0085DE!important;
+  color:white!important;
+  border:none;
+}
+
+.ropro-cloud-play-activated .create-server-invite-button {
+  background-color:#0085DE!important;
+  color:white!important;
+  border:none;
+}
+
+.ropro-cloud-play-activated .ropro-game-server-join {
+  background-color:#0085DE!important;
+  color:white!important;
+  border:none;
+}
+
+.ropro-cloud-play-activated .btn-common-play-game-lg {
+  background-color: #0085DE!important;
+}
+
+.ropro-cloud-play-activated .btn-growth-xs.btn-full-width {
+  background-color: #0085DE!important;
+  border: none;
+}
+
+/* Keep Roblox catalog modal range inputs readable when global theme opacity overlays are active. */
+.light-theme .filters-modal-container .MuiInputBase-root.MuiOutlinedInput-root {
+  background-color: #ffffff !important;
+}
+
+.light-theme .filters-modal-container .MuiInputBase-input.MuiOutlinedInput-input {
+  color: #1f2328 !important;
+  -webkit-text-fill-color: #1f2328 !important;
+}
+
+.light-theme .filters-modal-container .MuiInputLabel-root {
+  color: #5c6672 !important;
+}
+
+.light-theme .filters-modal-container .MuiInputLabel-root.Mui-focused {
+  color: #1f2328 !important;
+}
+
+.light-theme .filters-modal-container .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(34, 39, 46, 0.24) !important;
+}
+
+.dark-theme .filters-modal-container .MuiInputBase-root.MuiOutlinedInput-root {
+  background-color: rgba(23, 26, 30, 0.9) !important;
+}
+
+.dark-theme .filters-modal-container .MuiInputBase-input.MuiOutlinedInput-input {
+  color: #f4f6f8 !important;
+  -webkit-text-fill-color: #f4f6f8 !important;
+}
+
+.dark-theme .filters-modal-container .MuiInputLabel-root {
+  color: #b7c1cc !important;
+}
+
+.dark-theme .filters-modal-container .MuiInputLabel-root.Mui-focused {
+  color: #f4f6f8 !important;
+}
+
+.dark-theme .filters-modal-container .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(198, 209, 222, 0.36) !important;
+}
+
+.alert.ropro-hidden {
+  display: none;
+}
+
+.alert.ropro-hidden.on {
+  display: block;
+}
+
+/* Community search page – match Roblox's current rounded/padded content body style */
+#container-main:has(#group-search-web-app) {
+  padding: 0 20px;
+}
+
+#content:has(#group-search-web-app) {
+  border-radius: 10px;
+  max-width: calc(970px + 24px);
+  padding-left: 12px;
+  padding-right: 12px;
+}

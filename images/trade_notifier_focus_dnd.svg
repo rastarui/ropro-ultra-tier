@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="592" height="364" viewBox="0 0 592 364">
+  <defs>
+    <radialGradient id="panelGlow" cx="50%" cy="15%" r="90%">
+      <stop offset="0%" stop-color="#263849"/>
+      <stop offset="100%" stop-color="#2e3439"/>
+    </radialGradient>
+  </defs>
+  <rect x="1" y="1" width="590" height="362" rx="16" fill="url(#panelGlow)" stroke="#6d747a" stroke-width="2"/>
+  <text x="26" y="49" fill="#f1f3f5" font-size="40" font-family="Arial, Helvetica, sans-serif" font-weight="700">Focus</text>
+  <line x1="26" y1="80" x2="566" y2="80" stroke="#626a70" stroke-width="2"/>
+  <g transform="translate(52,128)">
+    <circle cx="0" cy="0" r="26" fill="#636b72"/>
+    <path d="M4 -13a14 14 0 1 0 8 24a11 11 0 1 1-8-24z" fill="#d5d9dc"/>
+  </g>
+  <text x="93" y="139" fill="#f1f3f5" font-size="40" font-family="Arial, Helvetica, sans-serif">Do Not Disturb</text>
+  <g transform="translate(52,196)">
+    <circle cx="0" cy="0" r="26" fill="#636b72"/>
+    <rect x="-13" y="-7" width="26" height="13" rx="3" fill="#d5d9dc"/>
+    <rect x="-16" y="-11" width="32" height="6" rx="3" fill="#d5d9dc"/>
+    <line x1="-7" y1="-7" x2="-7" y2="6" stroke="#636b72" stroke-width="3"/>
+    <line x1="7" y1="-7" x2="7" y2="6" stroke="#636b72" stroke-width="3"/>
+  </g>
+  <text x="93" y="207" fill="#f1f3f5" font-size="40" font-family="Arial, Helvetica, sans-serif">Sleep</text>
+  <g transform="translate(52,263)">
+    <circle cx="0" cy="0" r="26" fill="#636b72"/>
+    <circle cx="0" cy="-9" r="5" fill="#d5d9dc"/>
+    <circle cx="8.5" cy="-3.5" r="5" fill="#d5d9dc"/>
+    <circle cx="5.5" cy="6.5" r="5" fill="#d5d9dc"/>
+    <circle cx="-5.5" cy="6.5" r="5" fill="#d5d9dc"/>
+    <circle cx="-8.5" cy="-3.5" r="5" fill="#d5d9dc"/>
+    <circle cx="0" cy="0" r="4.5" fill="#636b72"/>
+  </g>
+  <text x="93" y="274" fill="#f1f3f5" font-size="40" font-family="Arial, Helvetica, sans-serif">Mindfulness</text>
+  <line x1="26" y1="300" x2="566" y2="300" stroke="#626a70" stroke-width="2"/>
+  <text x="26" y="344" fill="#f1f3f5" font-size="40" font-family="Arial, Helvetica, sans-serif">Focus Settings...</text>
+</svg>

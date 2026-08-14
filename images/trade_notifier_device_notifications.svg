@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="784" height="228" viewBox="0 0 784 228">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a2f34"/>
+      <stop offset="100%" stop-color="#3a4046"/>
+    </linearGradient>
+    <linearGradient id="chromeIconRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dfe3e6"/>
+    </linearGradient>
+  </defs>
+  <rect width="784" height="228" fill="url(#bg)" rx="8"/>
+  <line x1="25" y1="112" x2="759" y2="112" stroke="#4f565d" stroke-width="2"/>
+  <line x1="25" y1="198" x2="759" y2="198" stroke="#4f565d" stroke-width="2"/>
+  <g transform="translate(76,72)">
+    <circle cx="0" cy="0" r="28" fill="url(#chromeIconRing)"/>
+    <path d="M0,-22 A22,22 0 0 1 19.05,-11 L0,0 Z" fill="#ea4335"/>
+    <path d="M19.05,-11 A22,22 0 0 1 8,20 L0,0 Z" fill="#fbbc05"/>
+    <path d="M8,20 A22,22 0 0 1 -19.05,-11 L0,0 Z" fill="#34a853"/>
+    <path d="M-19.05,-11 A22,22 0 0 1 0,-22 L0,0 Z" fill="#ea4335"/>
+    <circle cx="0" cy="0" r="9.5" fill="#4285f4"/>
+    <circle cx="0" cy="0" r="4.5" fill="#9bc2ff"/>
+  </g>
+  <text x="125" y="67" fill="#f0f3f5" font-size="40" font-family="Arial, Helvetica, sans-serif">Google Chrome</text>
+  <text x="125" y="104" fill="#c3c9cd" font-size="38" font-family="Arial, Helvetica, sans-serif">Badges, Sounds, Banners</text>
+  <text x="742" y="86" fill="#8f979d" font-size="52" font-family="Arial, Helvetica, sans-serif">›</text>
+  <g transform="translate(76,158)">
+    <circle cx="0" cy="0" r="28" fill="url(#chromeIconRing)"/>
+    <path d="M0,-22 A22,22 0 0 1 19.05,-11 L0,0 Z" fill="#ea4335"/>
+    <path d="M19.05,-11 A22,22 0 0 1 8,20 L0,0 Z" fill="#fbbc05"/>
+    <path d="M8,20 A22,22 0 0 1 -19.05,-11 L0,0 Z" fill="#34a853"/>
+    <path d="M-19.05,-11 A22,22 0 0 1 0,-22 L0,0 Z" fill="#ea4335"/>
+    <circle cx="0" cy="0" r="9.5" fill="#4285f4"/>
+    <circle cx="0" cy="0" r="4.5" fill="#9bc2ff"/>
+  </g>
+  <text x="125" y="153" fill="#f0f3f5" font-size="40" font-family="Arial, Helvetica, sans-serif">Google Chrome Helper (Alerts)</text>
+  <text x="125" y="190" fill="#c3c9cd" font-size="38" font-family="Arial, Helvetica, sans-serif">Badges, Sounds, Alerts</text>
+  <text x="742" y="172" fill="#8f979d" font-size="52" font-family="Arial, Helvetica, sans-serif">›</text>
+</svg>

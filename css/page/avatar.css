@@ -1,0 +1,938 @@
+.wearing-name {
+	text-align:center!important;
+	border-radius:4px!important;
+	width:170px!important;
+	margin-left:-60px!important;
+	min-height:56px!important;
+	height:auto!important;
+	font-size:12px!important;
+	line-height:1.2!important;
+	padding:6px 8px!important;
+	position:absolute!important;
+	top:-58px!important;
+	text-overflow:clip!important;
+	overflow:hidden!important;
+	white-space:normal!important;
+	display:none!important;
+	background-color: rgba(255, 255, 255, 0.9);
+	pointer-events:none!important;
+}
+
+.dark-theme .wearing-name {
+	background-color: rgba(0,0,0,0.85)!important;
+}
+
+.wearing-name .wearing-item-link-row {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:4px;
+}
+
+.wearing-name .wearing-item-link {
+	display:inline-block;
+	flex:1 1 auto;
+	max-width:100%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	font-size:13px;
+	font-weight:700;
+}
+
+.wearing-name .wearing-catalog-link {
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	width:15px;
+	height:15px;
+	margin-top:0;
+	border-radius:4px;
+	opacity:0.92;
+	color:#ffffff;
+}
+
+.wearing-name .wearing-catalog-link:hover,
+.wearing-name .wearing-catalog-link:focus {
+	opacity:1;
+	background-color:rgba(255, 255, 255, 0.12);
+}
+
+.wearing-name .wearing-catalog-link svg {
+	display:block;
+	width:1em;
+	height:1em;
+}
+
+.wearing-name .wearing-item-cost {
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	gap:3px;
+	margin-top:2px;
+}
+
+.outfit-name {
+	text-align:center!important;
+	border-radius:4px!important;
+	width:125px!important;
+	margin-left:-31.25px!important;
+	height:25px!important;
+	font-size:12px!important;
+	padding-left:10px!important;
+	padding-right:10px!important;
+	position:absolute!important;
+	top:-25px!important;
+	text-overflow:ellipsis!important;
+	overflow:hidden!important;
+	white-space:nowrap!important;
+	display:none!important;
+}
+
+.light-theme .sandbox-icon-big {
+	filter: invert(0.75);
+}
+
+.wearing-div {
+	position:relative;
+	display:inline-block;
+	width:50px;
+	height:50px;
+	margin:2px;
+}
+
+.wearing-div .wearing-delete{
+	display:none!important;
+	position:absolute;
+	inset:0;
+	z-index:1003;
+	align-items:center;
+	justify-content:center;
+	border-radius:6px;
+	background:rgba(10, 14, 24, 0.42);
+	pointer-events:none;
+}
+
+.wearing-div:hover .wearing-delete{
+	display:flex!important;
+}
+
+.ropro-wearing-delete-button {
+	width:24px;
+	height:24px;
+	border:1px solid #ffc3c3;
+	background-color:#e22b2b;
+	font-size:14px;
+	font-weight:900;
+	line-height:1;
+	box-shadow:0 4px 10px rgba(0,0,0,0.35);
+	pointer-events:auto;
+}
+
+.ropro-wearing-delete-button:hover,
+.ropro-wearing-delete-button:focus {
+	background-color:#ff3c3c;
+	border-color:#ffd6d6;
+	color:#ffffff;
+}
+
+.wearing-div:hover .wearing-name {
+	display: inline-block!important;
+}
+
+.light-theme .wearing-name {
+	background-color: rgba(255,255,255,0.98)!important;
+	color:#111522!important;
+	border:1px solid rgba(17,21,34,0.28)!important;
+	box-shadow:0 2px 8px rgba(0,0,0,0.18)!important;
+	opacity:1!important;
+}
+
+.light-theme .wearing-name a,
+.light-theme .wearing-name span,
+.light-theme .wearing-name .text-header {
+	color:#111522!important;
+	opacity:1!important;
+	text-shadow:none!important;
+}
+
+.light-theme .wearing-name .wearing-catalog-link:hover,
+.light-theme .wearing-name .wearing-catalog-link:focus {
+	background-color:rgba(17, 21, 34, 0.12);
+}
+
+.light-theme .wearing-name .wearing-catalog-link {
+	color:#111522;
+}
+
+
+  /* The Modal (background) */
+  .upgrade-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .upgrade-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .upgrade-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .upgrade-modal-close:hover,
+  .upgrade-modal-close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* Modal Header */
+.upgrade-modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Modal Body */
+  .upgrade-modal-body {padding: 2px 16px;}
+  
+  /* Modal Footer */
+  .upgrade-modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Modal Content */
+  .upgrade-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.2s;
+  }
+
+  /* Modal Content */
+  .secondary-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    left: 2000px;
+    transition: left 0.4s;
+  }
+
+  /* Modal Content */
+  .secondary-modal-content-active {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    display:block!important;
+    transition: left 0.4s;
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: calc(50% -300px); opacity: 1}
+  }
+
+    /* Modal Content */
+  .upgrade-modal-content-secondary {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    left: -1000px!important;
+    transition: left 0.4s;
+  }
+
+  /* Modal Content */
+  .upgrade-modal-content-tertiary {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    left: initial;
+    transition: left 0.4s;
+  }
+
+#myGlower {
+    background-color: #ccc;
+    border: 2px solid transparent;    
+    -webkit-transition: border 0.1s linear, box-shadow 0.1s linear;
+       -moz-transition: border 0.1s linear, box-shadow 0.1s linear;
+            transition: border 0.1s linear, box-shadow 0.1s linear;
+}
+
+
+.inventoryList::-webkit-scrollbar {
+  width: 12px;
+}
+
+.inventoryList::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+
+.inventoryList::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.avatar-background-selector:hover {
+  z-index: 10000;
+  cursor: pointer;
+  transform: scale(1.3);
+  transition: transform 0.4s;
+}
+
+.avatar-background-selector {
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+
+.avatar-background-selector.selected {
+  outline: 3px solid #0084DD;
+}
+
+.dark-theme #outfitRandomizerButton .outfit-randomizer-icon {
+	filter:invert(0.8)!important;
+}
+
+.light-theme #outfitRandomizerButton .outfit-randomizer-icon {
+	filter:invert(0.2)!important;
+}
+
+.dark-theme #outfitRandomizerButton:hover .outfit-randomizer-icon {
+	filter:invert(1)!important;
+}
+
+.light-theme #outfitRandomizerButton:hover .outfit-randomizer-icon {
+	filter:invert(0)!important;
+}
+
+/**.ropro-changes .scale-container {
+  transform:scale(0.6);
+  position:absolute;
+  z-index:1000;
+  top:295px;
+  left:-10px;
+  width:140px!important;
+}
+
+.ropro-changes .section-sliders {
+  padding-top:0px;
+  padding-bottom:10px;
+}
+
+.ropro-avatar-menu {
+  height: 311px;
+  transition: height 0.2s!important;
+  overflow: hidden;
+}
+
+.ropro-avatar-menu.closed {
+  height: 35px;
+  overflow: hidden;
+  transition: height 0.2s!important;
+}**/
+
+@media (min-width: 991px) {
+  #wrap.pinned .ropro-avatar-menu {
+    margin-top: 352px;
+  }
+}
+
+#bodySelectorContainer {
+  width:260px!important;
+  transition: width 0.2s!important;
+}
+
+#bodySelectorContainer:hover {
+  width:535px!important;
+  transition: width 0.2s!important;
+}
+
+#bodySelectorContainer.ropro-body-adjustments-locked #bodyStyleBox,
+#bodySelectorContainer.ropro-body-adjustments-locked #bodySizeBox,
+#bodySelectorContainer.ropro-body-adjustments-locked #headSizeBox {
+  opacity: 0.34;
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+#defaultScales.ropro-body-adjustments-disabled {
+  opacity: 0.48;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.ropro-body-adjustment-lock-message {
+  position: absolute;
+  left: 106px;
+  top: 9px;
+  width: 145px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(24, 26, 28, 0.9);
+  color: #f4f7fa;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  display: none;
+  pointer-events: none;
+  z-index: 5;
+}
+
+#bodySelectorContainer.ropro-body-adjustments-locked .ropro-body-adjustment-lock-message {
+  display: block;
+}
+
+.light-theme .ropro-body-adjustment-lock-message {
+  border-color: rgba(34, 44, 56, 0.22);
+  background: rgba(245, 248, 252, 0.95);
+  color: #223140;
+}
+
+.head-slider input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance: none!important;
+  background:initial!important;
+  background-image: url(chrome-extension://__MSG_@@extension_id__/images/ropro_icon.png)!important;
+  background-size: contain!important;
+  border: 0px!important;
+  transform:scale(0.9)!important;
+  margin-left:5px;
+}
+
+.ropro-active-radio {
+  background-color:#0084DD!important;
+  color: white!important;
+}
+
+.light-theme #bodySelectorContainer {
+  background-color: #AAADAE!important;
+}
+
+.left-wrapper .section-content.remove-panel::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ropro-theme .recommendations-container {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+#content {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.avatar-back {
+  border-radius: 10px;
+}
+
+.changes-disabled .avatar-back {
+  border-radius: 0px!important;
+}
+
+.ropro-avatar-action-btn {
+  border: 1px solid #54585d;
+  border-radius: 9px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  min-height: 34px;
+  cursor: pointer;
+  background-color: #2f3133;
+  color: #f2f4f5;
+}
+
+.ropro-avatar-redraw-btn {
+  border-color: #0084dd;
+  background-color: #0084dd;
+  color: #ffffff;
+  font-weight: 700;
+  min-width: 132px;
+  box-shadow: 0 6px 14px rgba(9, 54, 106, 0.34);
+}
+
+.redraw-avatar > span,
+.redraw-avatar > button.text-link[type="button"] {
+  display: none !important;
+}
+
+.ropro-avatar-redraw-btn:hover {
+  border-color: #0a94f5;
+  background-color: #0a94f5;
+  box-shadow: 0 7px 16px rgba(10, 93, 168, 0.38);
+}
+
+.ropro-avatar-redraw-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.76;
+  filter: saturate(0.72);
+}
+
+.ropro-avatar-redraw-btn:disabled:hover {
+  border-color: #0084dd;
+  background-color: #0084dd;
+  box-shadow: 0 6px 14px rgba(9, 54, 106, 0.34);
+}
+
+.ropro-avatar-redraw-btn.ropro-avatar-redraw-inflight,
+.ropro-avatar-redraw-btn.ropro-avatar-redraw-inflight:hover,
+.ropro-avatar-redraw-btn.ropro-avatar-redraw-inflight:disabled {
+  border-color: #6d7176;
+  background-color: #6d7176;
+  color: #ffffff;
+  box-shadow: none;
+  opacity: 0.95;
+}
+
+.ropro-avatar-redraw-btn.ropro-avatar-redraw-pending {
+  border-color: #d44b4b;
+  background-color: #d44b4b;
+  color: #ffffff;
+  animation: ropro-avatar-redraw-pulse 1.05s ease-in-out infinite;
+  box-shadow: 0 0 0 1px rgba(212, 75, 75, 0.5), 0 0 14px rgba(255, 95, 95, 0.58);
+}
+
+.ropro-avatar-redraw-btn.ropro-avatar-redraw-pending:disabled:hover {
+  border-color: #d44b4b;
+  background-color: #d44b4b;
+}
+
+@keyframes ropro-avatar-redraw-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 75, 75, 0.56), 0 0 10px rgba(255, 95, 95, 0.52);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(212, 75, 75, 0.16), 0 0 24px rgba(255, 95, 95, 0.82);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 75, 75, 0.08), 0 0 10px rgba(255, 95, 95, 0.44);
+  }
+}
+
+.ropro-quick-equip-modal {
+  background-color: rgba(5, 10, 18, 0.72) !important;
+  backdrop-filter: blur(4px);
+  padding: 14px;
+}
+
+.ropro-quick-equip-card {
+  width: min(760px, 94vw) !important;
+  max-height: 88vh;
+  margin: 3vh auto !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(141, 179, 224, 0.3) !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-theme .ropro-quick-equip-card {
+  background: linear-gradient(155deg, #141b26 0%, #1c2635 52%, #121922 100%) !important;
+}
+
+.light-theme .ropro-quick-equip-card {
+  background: linear-gradient(155deg, #ffffff 0%, #f0f7ff 55%, #e6f1ff 100%) !important;
+  border-color: rgba(18, 73, 128, 0.22) !important;
+}
+
+.ropro-quick-equip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 18px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .ropro-quick-equip-header {
+  background: linear-gradient(135deg, rgba(78, 144, 214, 0.25) 0%, rgba(35, 93, 158, 0.14) 100%);
+}
+
+.light-theme .ropro-quick-equip-header {
+  background: linear-gradient(135deg, rgba(214, 238, 255, 0.92) 0%, rgba(198, 229, 255, 0.85) 100%);
+  border-bottom-color: rgba(22, 79, 134, 0.18);
+}
+
+.ropro-quick-equip-title-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.ropro-quick-equip-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+  flex-shrink: 0;
+}
+
+.ropro-quick-equip-title-copy {
+  min-width: 0;
+}
+
+.ropro-quick-equip-title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.dark-theme .ropro-quick-equip-title {
+  color: #f2f7ff;
+}
+
+.light-theme .ropro-quick-equip-title {
+  color: #102947;
+}
+
+.ropro-quick-equip-subtitle {
+  margin: 2px 0 0;
+  font-size: 12px;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dark-theme .ropro-quick-equip-subtitle {
+  color: rgba(226, 239, 255, 0.78);
+}
+
+.light-theme .ropro-quick-equip-subtitle {
+  color: rgba(16, 41, 71, 0.72);
+}
+
+.ropro-quick-equip-close-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(16, 19, 24, 0.76);
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 22px;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.ropro-quick-equip-close-button:hover {
+  transform: translateY(-1px);
+  background: rgba(31, 136, 255, 0.28);
+  border-color: rgba(107, 186, 255, 0.84);
+}
+
+.ropro-quick-equip-search-shell {
+  margin: 12px 18px 8px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid rgba(136, 180, 229, 0.28);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+}
+
+.dark-theme .ropro-quick-equip-search-shell {
+  background: rgba(16, 22, 31, 0.65);
+}
+
+.light-theme .ropro-quick-equip-search-shell {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(23, 86, 146, 0.24);
+}
+
+.ropro-quick-equip-search-icon {
+  flex-shrink: 0;
+  opacity: 0.82;
+}
+
+.dark-theme .ropro-quick-equip-search-icon {
+  color: #d2e8ff;
+}
+
+.light-theme .ropro-quick-equip-search-icon {
+  color: #2b537d;
+}
+
+.ropro-quick-equip-search-input {
+  flex: 1 1 auto;
+  border: 0 !important;
+  background: transparent !important;
+  height: 44px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 21px !important;
+  box-shadow: none !important;
+}
+
+.dark-theme .ropro-quick-equip-search-input {
+  color: #f4f8ff !important;
+}
+
+.light-theme .ropro-quick-equip-search-input {
+  color: #0f2c4b !important;
+}
+
+.ropro-quick-equip-search-input::placeholder {
+  opacity: 0.72;
+}
+
+.ropro-quick-equip-loading {
+  display: inline-flex;
+  width: 100%;
+  min-height: 180px;
+  margin: 8px auto 0;
+  transform: scale(1.08);
+}
+
+.ropro-quick-equip-body {
+  padding: 2px 18px 16px;
+}
+
+.ropro-quick-equip-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: min(62vh, 500px);
+  overflow-y: auto;
+}
+
+.ropro-quick-equip-item {
+  margin: 0 0 10px;
+  list-style: none;
+}
+
+.ropro-quick-equip-item:last-child {
+  margin-bottom: 4px;
+}
+
+.ropro-quick-equip-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 52px;
+  align-items: center;
+  gap: 14px;
+  min-height: 78px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.dark-theme .ropro-quick-equip-row {
+  background: linear-gradient(145deg, #252b3a 0%, #212838 100%);
+  border-color: rgba(137, 171, 214, 0.2);
+}
+
+.light-theme .ropro-quick-equip-row {
+  background: linear-gradient(145deg, #ffffff 0%, #edf5ff 100%);
+  border-color: rgba(15, 84, 147, 0.16);
+}
+
+.ropro-quick-equip-thumb-link {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ropro-quick-equip-thumb {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.ropro-quick-equip-thumb-loader {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
+  background: rgba(15, 22, 31, 0.22);
+}
+
+.light-theme .ropro-quick-equip-thumb-loader {
+  background: rgba(232, 241, 252, 0.5);
+}
+
+.ropro-quick-equip-thumb-loader .ropro-branded-loader {
+  width: 34px;
+  min-height: 34px;
+  gap: 0;
+}
+
+.ropro-quick-equip-thumb-loader .ropro-branded-loader-ring {
+  width: 18px;
+  height: 18px;
+}
+
+.ropro-quick-equip-thumb-loader .ropro-branded-loader-spin {
+  width: 10px;
+  height: 10px;
+}
+
+.ropro-quick-equip-thumb-loader .ropro-branded-loader-logo {
+  width: 7px;
+  height: 7px;
+}
+
+.ropro-quick-equip-thumb-loader .ropro-branded-loader-label {
+  display: none;
+}
+
+.ropro-quick-equip-item-main {
+  min-width: 0;
+}
+
+.ropro-quick-equip-item-name {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 500;
+  text-decoration: none !important;
+}
+
+.dark-theme .ropro-quick-equip-item-name {
+  color: #ecf1f8 !important;
+}
+
+.light-theme .ropro-quick-equip-item-name {
+  color: #16395b !important;
+}
+
+.ropro-quick-equip-item-name:hover {
+  text-decoration: underline !important;
+}
+
+.ropro-quick-equip-add-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 0 !important;
+  font-size: 42px !important;
+  line-height: 1 !important;
+  padding: 0 0 6px !important;
+  margin: 0 !important;
+  background: linear-gradient(145deg, #1a93ea 0%, #1579d8 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 16px rgba(9, 57, 109, 0.35);
+}
+
+.ropro-quick-equip-add-button:hover {
+  background: linear-gradient(145deg, #21a2ff 0%, #1a86e4 100%) !important;
+}
+
+@media (max-width: 860px) {
+  .ropro-quick-equip-card {
+    width: 95vw !important;
+    max-height: 92vh;
+  }
+
+  .ropro-quick-equip-subtitle {
+    display: none;
+  }
+
+  .ropro-quick-equip-search-input {
+    font-size: 18px !important;
+  }
+
+  .ropro-quick-equip-row {
+    grid-template-columns: 54px minmax(0, 1fr) 46px;
+    gap: 10px;
+    min-height: 70px;
+    padding: 8px 10px;
+  }
+
+  .ropro-quick-equip-thumb-link,
+  .ropro-quick-equip-thumb {
+    width: 50px;
+    height: 50px;
+  }
+
+  .ropro-quick-equip-thumb-loader .ropro-branded-loader {
+    width: 30px;
+    min-height: 30px;
+  }
+
+  .ropro-quick-equip-thumb-loader .ropro-branded-loader-ring {
+    width: 16px;
+    height: 16px;
+  }
+
+  .ropro-quick-equip-thumb-loader .ropro-branded-loader-spin {
+    width: 9px;
+    height: 9px;
+  }
+
+  .ropro-quick-equip-thumb-loader .ropro-branded-loader-logo {
+    width: 6px;
+    height: 6px;
+  }
+
+  .ropro-quick-equip-item-name {
+    font-size: 16px;
+  }
+
+  .ropro-quick-equip-add-button {
+    width: 40px;
+    height: 40px;
+    font-size: 36px !important;
+  }
+}

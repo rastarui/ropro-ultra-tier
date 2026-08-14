@@ -1,0 +1,909 @@
+.toggle-three-dee{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:#fff;color:#191919;cursor:pointer;display:inline-block;font-weight:500;height:auto;text-align:center;white-space:nowrap;vertical-align:middle;padding:9px;font-size:16px;line-height:100%;border-radius:3px;border:1px solid #b8b8b8;position:absolute;bottom:12px;right:54px;}
+.toggle-three-dee:link{color:#191919;}
+.toggle-three-dee:focus,.toggle-three-dee:hover{background-color:#fff;border-color:#b8b8b8;color:#191919;cursor:pointer;}
+.toggle-three-dee:active{background-color:#fff;color:#191919;}
+.toggle-three-dee:active:focus{outline:0 none;}
+.toggle-three-dee:visited{color:#191919;}
+.toggle-three-dee:visited:focus{outline:0 none;}
+
+.sandbox-frame{
+	position:absolute;
+	max-width:277px;
+	height:352px;
+	top:0px;
+	left:0px;
+	transition:0.5s;
+}
+
+.sandbox-frame-full{
+	max-width:970px;
+	height:600px;
+	top:0px;
+	left:0px;
+	transition:0.5s;
+}
+
+.sandbox-iframe{
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	border:none;
+}
+
+.ropro-sandbox-title {
+	display:inline-flex;
+	align-items:center;
+	gap:10px;
+	margin:0;
+}
+
+.ropro-sandbox-title .ropro-page-heading-logo {
+	width:28px;
+	height:28px;
+	object-fit:contain;
+	flex:0 0 auto;
+	margin-left:4px;
+}
+
+.sandbox-fullscreen-toggle:hover{
+	opacity:1;
+}
+
+.ropro-robux-icon-inline {
+	display:inline-block;
+	vertical-align:middle;
+	object-fit:contain;
+	width:15px;
+	height:15px;
+}
+
+.ropro-robux-icon-cost {
+	width:32px;
+	height:32px;
+}
+
+.ropro-robux-icon-wearing {
+	width:15px;
+	height:15px;
+	margin-left:-2px;
+	margin-right:-3px;
+	margin-bottom:0;
+	transform:none;
+}
+
+.ropro-robux-icon-price {
+	width:15px;
+	height:15px;
+	margin-top:-2px;
+}
+
+.avatar-type-toggle.pill-toggle input[type="radio"] + label {
+	color:#d5d9e3 !important;
+	text-shadow:none !important;
+}
+
+.avatar-type-toggle.pill-toggle input[type="radio"]:checked + label {
+	color:#ffffff !important;
+	background-color:#23293a !important;
+	border-color:#2e3550 !important;
+	font-weight:700 !important;
+	text-shadow:none !important;
+}
+
+.ropro-sandbox-search-row {
+	display:flex!important;
+	align-items:stretch!important;
+	flex-wrap:nowrap!important;
+}
+
+.ropro-sandbox-search-row .input-addon-btn {
+	position:relative!important;
+	float:none!important;
+	display:inline-flex!important;
+	align-items:center!important;
+	justify-content:center!important;
+	flex:0 0 auto!important;
+}
+
+.ropro-sandbox-search-input {
+	flex:1 1 auto!important;
+	min-width:0!important;
+	height:38px!important;
+	border-radius:0!important;
+	border:1px solid #405070!important;
+	border-right:0!important;
+	border-top-left-radius:4px!important;
+	border-bottom-left-radius:4px!important;
+}
+
+.ropro-sandbox-search-clear-button {
+	min-width:38px!important;
+	width:38px!important;
+	height:38px!important;
+	border:1px solid #405070!important;
+	border-left:0!important;
+	border-right:0!important;
+	border-radius:0!important;
+	background-color:#2a3246!important;
+	color:#f0f5ff!important;
+	font-size:14px!important;
+	font-weight:700!important;
+	line-height:1!important;
+}
+
+.ropro-sandbox-search-clear-button:hover,
+.ropro-sandbox-search-clear-button:focus {
+	background-color:#353f58!important;
+	color:#ffffff!important;
+}
+
+.ropro-sandbox-search-controls {
+	flex:0 0 150px!important;
+	width:150px!important;
+	position:relative!important;
+}
+
+.ropro-sandbox-search-controls .input-dropdown-btn {
+	width:150px!important;
+	min-width:150px!important;
+	height:38px!important;
+	border-top-left-radius:0!important;
+	border-bottom-left-radius:0!important;
+	border-top-right-radius:4px!important;
+	border-bottom-right-radius:4px!important;
+}
+
+.ropro-sandbox-search-controls .dropdown-custom {
+	left:auto!important;
+	right:0!important;
+}
+
+.light-theme .ropro-sandbox-search-clear-button {
+	background-color:#e9eef6!important;
+	border-color:#b8c7dd!important;
+	color:#182238!important;
+}
+
+.light-theme .ropro-sandbox-search-input {
+	border-color:#b8c7dd!important;
+	background-color:#ffffff!important;
+	color:#111522!important;
+}
+
+.light-theme .ropro-sandbox-search-clear-button:hover,
+.light-theme .ropro-sandbox-search-clear-button:focus {
+	background-color:#dbe4f1!important;
+	color:#101728!important;
+}
+
+.outfit-name-entry-row {
+	display:flex;
+	gap:6px;
+	align-items:center;
+}
+
+.outfit-name-entry-row .outfit-name-input {
+	flex:1 1 auto;
+	min-width:0;
+}
+
+.ropro-outfit-submit-button {
+	height:38px!important;
+	min-width:64px!important;
+	margin-top:2px!important;
+	background-color:#0084dd!important;
+	border:0!important;
+	color:#ffffff!important;
+	font-weight:700!important;
+}
+
+.ropro-outfit-submit-button:hover,
+.ropro-outfit-submit-button:focus {
+	filter:brightness(1.08)!important;
+	color:#ffffff!important;
+}
+
+.ropro-sandbox-save-button-locked,
+.ropro-sandbox-save-button-locked:hover,
+.ropro-sandbox-save-button-locked:focus {
+	filter:none!important;
+	text-shadow:none!important;
+	box-shadow:none!important;
+	cursor:pointer!important;
+}
+
+.dark-theme .ropro-sandbox-save-button-locked {
+	background-color:#4a4f57!important;
+	border-color:#646a73!important;
+	color:#c3c8d0!important;
+}
+
+.light-theme .ropro-sandbox-save-button-locked {
+	background-color:#d9dde2!important;
+	border-color:#bdc3cb!important;
+	color:#6a727c!important;
+}
+
+.ropro-sandbox-save-button-locked::after {
+	content:" \1F512";
+	font-size:11px;
+	line-height:1;
+	vertical-align:middle;
+}
+
+.outfit-div .outfit-delete{
+	display: none!important;
+}
+
+.outfit-div:hover .outfit-delete{
+	display: block!important;
+}
+
+.ropro-outfit-delete-button {
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	border:1px solid #ff7a7a;
+	background-color:#d31c1c;
+	color:#ffffff;
+	font-size:12px;
+	font-weight:800;
+	line-height:1;
+	padding:0;
+	cursor:pointer;
+	box-shadow:0 3px 8px rgba(0,0,0,0.35);
+}
+
+.ropro-outfit-delete-button:hover,
+.ropro-outfit-delete-button:focus {
+	background-color:#f02f2f;
+	color:#ffffff;
+}
+
+.outfit-div .outfit-name{
+	display: none!important;
+}
+
+.outfit-div:hover .outfit-name{
+	display: block!important;
+}
+
+.dark-theme .catalog-tabs {
+	background-color:#393B3D;
+}
+
+.catalog-tabs {
+	z-index:100000;
+	font-size:16px;
+	width:680px;
+	text-align:center;
+	margin-right:14px;
+}
+
+.catalog-tab {
+	padding:12px;
+	width:113.333px;
+	float:left;
+	font-weight:bold;
+}
+
+.wearing-name {
+	text-align:center!important;
+	border-radius:4px!important;
+	width:170px!important;
+	margin-left:-60px!important;
+	min-height:56px!important;
+	height:auto!important;
+	font-size:12px!important;
+	line-height:1.2!important;
+	padding:6px 8px!important;
+	position:absolute!important;
+	top:-58px!important;
+	text-overflow:clip!important;
+	overflow:hidden!important;
+	white-space:normal!important;
+	display:none!important;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-theme .wearing-name {
+	background-color: rgba(0,0,0,0.85)!important;
+}
+
+.wearing-name .wearing-item-link-row {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:4px;
+}
+
+.wearing-name .wearing-item-link {
+	display:inline-block;
+	flex:1 1 auto;
+	max-width:100%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	font-size:13px;
+	font-weight:700;
+}
+
+.wearing-name .wearing-catalog-link {
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	width:18px;
+	height:18px;
+	margin-top:0;
+	border-radius:4px;
+	opacity:0.92;
+	color:#ffffff;
+}
+
+.wearing-name .wearing-catalog-link:hover,
+.wearing-name .wearing-catalog-link:focus {
+	opacity:1;
+	background-color:rgba(255, 255, 255, 0.12);
+}
+
+.wearing-name .wearing-catalog-link svg {
+	display:block;
+	width:1em;
+	height:1em;
+}
+
+.wearing-name .wearing-item-cost {
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	gap:2px;
+	margin-top:1px;
+}
+
+.wearing-name .wearing-item-cost .ropro-robux-icon-wearing {
+	width:15px;
+	height:15px;
+	transform:none;
+	margin-left:0;
+	margin-right:0;
+	margin-bottom:0;
+	margin-top:-1px;
+}
+
+.wearing-name .wearing-item-cost [class^="wearing-robux-"] {
+	position:relative;
+	top:-1px;
+}
+
+#outfitCostDiv .ropro-robux-icon-cost {
+	position:relative;
+	top:-1px;
+}
+
+#outfitCostDiv .text-header {
+	position:relative;
+	top:-1px;
+}
+
+.outfit-cost-offsale-pill {
+	display:inline-block;
+	margin-left:6px;
+	padding:1px 8px;
+	border-radius:999px;
+	font-size:10px;
+	line-height:1.15;
+	font-weight:700;
+	color:#f6f9ff;
+	background:rgba(181, 47, 47, 0.75);
+}
+
+.outfit-name {
+	text-align:center!important;
+	border-radius:6px!important;
+	width:auto!important;
+	max-width:calc(100% - 8px)!important;
+	margin-left:0!important;
+	min-height:22px!important;
+	height:auto!important;
+	font-size:12px!important;
+	font-weight:600!important;
+	line-height:1.2!important;
+	padding:4px 6px!important;
+	position:absolute!important;
+	top:4px!important;
+	left:4px!important;
+	right:4px!important;
+	text-overflow:ellipsis!important;
+	overflow:hidden!important;
+	white-space:nowrap!important;
+	display:none!important;
+	background-color:#0d1119!important;
+	border:1px solid rgba(169, 188, 216, 0.42)!important;
+	color:#f2f7ff!important;
+	box-shadow:0 5px 14px rgba(0,0,0,0.36)!important;
+	text-shadow:none!important;
+	opacity:1!important;
+	z-index: 1002!important;
+	pointer-events:none!important;
+}
+
+.light-theme .outfit-name {
+	background-color: rgba(255,255,255,0.98)!important;
+	border:1px solid rgba(17,21,34,0.28)!important;
+	color:#111522!important;
+	box-shadow:0 3px 10px rgba(0,0,0,0.2)!important;
+}
+
+.light-theme .sandbox-icon-big {
+	filter: invert(0.75);
+}
+
+.wearing-div {
+	position:relative;
+	display:inline-block;
+	width:50px;
+	height:50px;
+	margin:2px;
+}
+
+.wearing-div .wearing-delete{
+	display:none!important;
+	position:absolute;
+	inset:0;
+	z-index:1003;
+	align-items:center;
+	justify-content:center;
+	border-radius:6px;
+	background:rgba(10, 14, 24, 0.42);
+	pointer-events:none;
+}
+
+.wearing-div:hover .wearing-delete{
+	display:flex!important;
+}
+
+.ropro-wearing-delete-button {
+	width:24px;
+	height:24px;
+	border:1px solid #ffc3c3;
+	background-color:#e22b2b;
+	font-size:14px;
+	font-weight:900;
+	line-height:1;
+	box-shadow:0 4px 10px rgba(0,0,0,0.35);
+	pointer-events:auto;
+}
+
+.ropro-wearing-delete-button:hover,
+.ropro-wearing-delete-button:focus {
+	background-color:#ff3c3c;
+	border-color:#ffd6d6;
+	color:#ffffff;
+}
+
+.wearing-div:hover .wearing-name {
+	display: inline-block!important;
+}
+
+.wearing-div.ropro-wearing-hover-open .wearing-name {
+	display: inline-block!important;
+}
+
+.light-theme .wearing-name {
+	background-color: rgba(255,255,255,0.98)!important;
+	color:#111522!important;
+	border:1px solid rgba(17,21,34,0.28)!important;
+	box-shadow:0 2px 8px rgba(0,0,0,0.18)!important;
+	opacity:1!important;
+}
+
+.light-theme .wearing-name a,
+.light-theme .wearing-name span,
+.light-theme .wearing-name .text-header {
+	color:#111522!important;
+	opacity:1!important;
+	text-shadow:none!important;
+}
+
+.light-theme .wearing-name .wearing-catalog-link:hover,
+.light-theme .wearing-name .wearing-catalog-link:focus {
+	background-color:rgba(17, 21, 34, 0.12);
+}
+
+.light-theme .wearing-name .wearing-catalog-link {
+	color:#111522;
+}
+
+.item-content .item-card-caption .item-card-name-link {
+	display:flex;
+	flex-direction:column;
+	align-items:flex-start;
+	min-height:52px;
+}
+
+.ropro-sandbox-item-name {
+	float:none!important;
+	display:-webkit-box!important;
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
+	overflow:hidden!important;
+	text-overflow:ellipsis!important;
+	white-space:normal!important;
+	width:100%!important;
+	min-height:30px;
+	line-height:1.2;
+}
+
+.ropro-sandbox-item-price {
+	display:inline-flex!important;
+	align-items:center!important;
+	gap:1px!important;
+	min-height:18px!important;
+	margin-top:0!important;
+	float:none!important;
+}
+
+.ropro-sandbox-item-price .ropro-robux-icon-price {
+	margin-top:-1px;
+	flex:0 0 auto;
+}
+
+.ropro-sandbox-item-price .ropro-catalog-price-label {
+	margin-left:0!important;
+	position:relative!important;
+	top:-1px!important;
+	line-height:1;
+}
+
+.light-theme .ropro-sandbox-item-price .ropro-robux-icon-price,
+.light-theme .ropro-robux-icon-cost,
+.light-theme .wearing-item-cost .ropro-robux-icon-wearing {
+	filter:brightness(0) saturate(100%);
+}
+
+.dark-theme .catalog-tab {
+	cursor:pointer;
+}
+
+.dark-theme .catalog-tab:hover{
+	border-bottom:2px solid white;
+	padding-bottom: 10px;
+}
+
+.catalog-tab:hover{
+	border-bottom:2px solid black;
+	padding-bottom: 10px;
+}
+
+.dark-theme .catalog-tab.active{
+	border-bottom:4px solid white;
+	padding-bottom:8px;
+}
+
+.catalog-tab.active{
+	border-bottom:4px solid black;
+	padding-bottom:8px;
+}
+.item-card-thumb:hover{
+	background: radial-gradient(transparent,rgba(0,0,0,.3));
+}
+.item-card-thumb .checkmark-image{
+	opacity:0;
+	transition: 0.3s;
+}
+.item-card-thumb .checkmark-image.active{
+	opacity:1;
+}
+.item-card-thumb:hover .checkmark-image{
+	transition: 0.3s;
+}
+.dropdown-custom{
+	transform:scaleY(0);
+	transform-origin:top;
+	transition:0.3s;
+}
+.dropdown-custom.active{
+	transform:scaleY(1);
+	transform-origin:top;
+	height:auto;
+	transition:0.3s;
+}
+
+.dropdown-custom::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+.dropdown-custom::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.0); 
+    border-radius: 10px;
+}
+ 
+.dropdown-custom::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1.0); 
+}
+
+/* The Modal (background) */
+.upgrade-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .upgrade-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .upgrade-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .upgrade-modal-close:hover,
+  .upgrade-modal-close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* Modal Header */
+.upgrade-modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Modal Body */
+  .upgrade-modal-body {padding: 2px 16px;}
+  
+  /* Modal Footer */
+  .upgrade-modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Modal Content */
+  .upgrade-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: -webkit-calc(50% - 250px); opacity: 1}
+  }
+
+.sandbox-iframe {
+	  border-radius: 10px;
+  }
+
+.ropro-upgrade-modal {
+	background-color: rgba(5,10,18,0.7);
+	backdrop-filter: blur(3px);
+	padding:24px;
+	display:flex !important;
+	align-items:center;
+	justify-content:center;
+	min-height:100vh;
+	box-sizing:border-box;
+}
+
+.ropro-upgrade-modal .ropro-upgrade-card {
+	background: linear-gradient(145deg, #111827 0%, #1b2434 55%, #111827 100%);
+	border: 1px solid rgba(132, 146, 179, 0.36);
+	border-radius: 16px;
+	box-shadow: 0 20px 48px rgba(0,0,0,0.48);
+	width: min(880px, 92vw);
+	max-height: 86vh;
+	overflow: auto;
+	margin: 0 auto;
+	padding: 26px 28px 24px;
+	color: #f4f8ff;
+	font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+	position: relative;
+	animation: roproUpgradeIn 180ms ease-out;
+}
+
+.ropro-upgrade-layout {
+	display: grid;
+	grid-template-columns: minmax(220px, 270px) 1fr;
+	gap: 24px;
+	align-items: center;
+}
+
+.ropro-upgrade-hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+}
+
+.ropro-upgrade-logo {
+	width: 88px;
+	height: 88px;
+	object-fit: contain;
+	filter: drop-shadow(0 8px 12px rgba(5, 8, 14, 0.55));
+}
+
+.ropro-upgrade-video {
+	width: 100%;
+	max-width: 250px;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: 14px;
+	border: 1px solid rgba(116, 183, 255, 0.32);
+	background: radial-gradient(circle at 40% 15%, rgba(22, 115, 203, 0.35), rgba(5, 10, 18, 0.9));
+	box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+}
+
+.ropro-upgrade-title {
+	margin: 0 0 12px;
+	padding: 0 0 10px;
+	font-size: 38px;
+	font-weight: 800;
+	letter-spacing: 0.2px;
+	line-height: 1.08;
+	border-bottom: 2px solid rgba(136, 199, 255, 0.42);
+}
+
+.ropro-upgrade-subtitle {
+	margin: 0 0 12px;
+	font-size: 25px;
+	line-height: 1.28;
+	font-weight: 500;
+	color: #e5edf8;
+}
+
+.ropro-upgrade-tier {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-weight: 800;
+	color: #ffffff;
+	white-space: nowrap;
+}
+
+.ropro-upgrade-tier img {
+	width: 22px;
+	height: 22px;
+	object-fit: contain;
+}
+
+.ropro-upgrade-benefits h3 {
+	margin: 2px 0 8px;
+	font-size: 30px;
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: rgba(155, 207, 255, 0.6);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 4px;
+}
+
+.ropro-upgrade-benefits ul {
+	margin: 0 0 16px;
+	padding-left: 22px;
+	font-size: 16px;
+	line-height: 1.55;
+	color: #d7e2f3;
+}
+
+.ropro-upgrade-benefits li {
+	margin-bottom: 4px;
+}
+
+.ropro-upgrade-benefits a {
+	color: #9dd8ff;
+	text-decoration: underline;
+}
+
+.ropro-upgrade-cta-link {
+	display: block;
+	text-decoration: none;
+}
+
+.ropro-upgrade-cta-button {
+	width: 100%;
+	height: 50px;
+	border: none;
+	border-radius: 11px;
+	background: linear-gradient(90deg, #1d76d9 0%, #355ee8 100%);
+	color: #ffffff;
+	font-size: 26px;
+	font-weight: 700;
+	letter-spacing: 0.2px;
+	box-shadow: 0 10px 24px rgba(9, 53, 150, 0.46);
+	transition: transform 120ms ease, filter 120ms ease;
+}
+
+.ropro-upgrade-cta-button:hover {
+	filter: brightness(1.08);
+	transform: translateY(-1px);
+}
+
+.ropro-upgrade-close {
+	color: rgba(236, 243, 255, 0.84);
+	background: transparent;
+	border: none;
+	font-size: 44px;
+	line-height: 1;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+
+.ropro-upgrade-close:hover,
+.ropro-upgrade-close:focus {
+	color: #ffffff;
+	text-shadow: 0 0 8px rgba(173, 221, 255, 0.7);
+}
+
+@keyframes roproUpgradeIn {
+	from {
+		transform: translateY(-10px) scale(0.985);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+}
+
+@media (max-width: 900px) {
+	.ropro-upgrade-modal {
+		padding: 10px;
+	}
+	.ropro-upgrade-modal .ropro-upgrade-card {
+		width: 95vw;
+		padding: 16px 14px 14px;
+		max-height: 92vh;
+	}
+	.ropro-upgrade-layout {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+	.ropro-upgrade-video {
+		max-width: 220px;
+	}
+	.ropro-upgrade-title {
+		font-size: 30px;
+		padding-right: 44px;
+	}
+	.ropro-upgrade-subtitle {
+		font-size: 22px;
+	}
+	.ropro-upgrade-benefits h3 {
+		font-size: 27px;
+	}
+	.ropro-upgrade-cta-button {
+		font-size: 24px;
+	}
+}

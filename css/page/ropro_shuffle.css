@@ -1,0 +1,34 @@
+.ropro-randomizer-info-button:hover .ropro-randomizer-tooltip {
+  display: block!important;
+}
+
+.ropro-all-experiences-list-container .horizontal-scroller {
+  position: relative;
+}
+
+.games-page-container .scroller .spacer {
+  background-color: inherit !important;
+}
+
+.ropro-all-experiences-list-container .ropro-all-experiences-game-cards {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.ropro-all-experiences-list-container .horizontal-scroll-window,
+.ropro-all-experiences-list-container .horizontally-scrollable {
+  height: auto !important;
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.ropro-all-experiences-list-container .ropro-experiences-loading-spinner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+}

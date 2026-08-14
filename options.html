@@ -1,0 +1,1290 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RoPro Settings</title>
+	<meta charset="utf-8">
+    <style>
+	@font-face {
+     font-family: "Lato";
+     src: url(./fonts/Lato-Regular.ttf);
+    }
+	@font-face {
+     font-family: "LatoBold";
+     src: url(./fonts/Lato-Bold.ttf);
+    }
+	@font-face {
+		font-family: RalewayMedium;
+		src: url(./fonts/Raleway-Medium.ttf) format("truetype");
+	}
+	@font-face {
+		font-family: RalewayBold;
+		src: url(./fonts/Raleway-Bold.ttf) format("truetype");
+	}
+   
+    .optionsbody{
+	  width:540px;
+	  height:600px;
+	  margin:auto;
+	  padding:20px;
+	  background:#3A3F44;
+	  color:white!important;
+	}
+	
+	.whitefont{
+	  color:white!important;
+	  font-family:RalewayBold;
+	}
+
+	.bodycontent{
+	  max-width:550px;
+	  margin:auto;
+	  font-family:RalewayMedium;
+	  text-align:center;
+	}
+	
+	.featurePreview:hover{
+		cursor:pointer;
+	}
+
+	.tradeNotifierSetupGuideButton{
+		position:absolute;
+		right:-64px;
+		top:3px;
+		font-size:9.5px;
+		line-height:1;
+		font-family:RalewayBold;
+		color:#ff6666!important;
+		background:rgba(255,102,102,0.12);
+		border:1px solid #ff6666;
+		border-radius:8px;
+		padding:2px 5px;
+	}
+
+	.tradeNotifierSetupGuideButton:hover{
+		cursor:pointer;
+	}
+
+	.ui.inverted.modal{
+		max-width:96vw!important;
+		border:1px solid #586372!important;
+		border-radius:16px!important;
+		box-shadow:0 18px 44px rgba(3,8,14,0.58)!important;
+		overflow:hidden!important;
+	}
+
+	.ui.inverted.modal .content{
+		max-height:72vh;
+		overflow-y:auto;
+		border-radius:16px!important;
+	}
+
+	.ui.inverted.modal .content img{
+		width: min(92%, 500px) !important;
+		max-width: min(92vw, 500px) !important;
+		height: auto !important;
+		max-height: min(48vh, calc(72vh - 150px)) !important;
+		object-fit: contain;
+		display: block;
+		margin: 0 auto 10px;
+	}
+
+	@media (max-width: 560px), (max-height: 620px){
+		.optionsbody{
+			width: 100%;
+			padding: 12px;
+			height: auto;
+		}
+
+		.bodycontent{
+			max-width: 100%;
+		}
+
+		.ui.inverted.modal{
+			width: 96vw !important;
+			max-width: 96vw !important;
+			margin: 0 auto !important;
+		}
+
+		.ui.inverted.modal .content{
+			max-height: 74vh !important;
+			padding-left: 8px !important;
+			padding-right: 8px !important;
+		}
+
+		.ui.inverted.modal .content img{
+			max-width: 93vw !important;
+			max-height: min(50vh, calc(74vh - 130px)) !important;
+		}
+	}
+
+	.ropro-modal-close{
+		position:absolute;
+		right:12px;
+		top:12px;
+		width:30px;
+		height:30px;
+		min-width:30px;
+		min-height:30px;
+		max-width:30px;
+		max-height:30px;
+		box-sizing:border-box;
+		border-radius:999px!important;
+		-webkit-appearance:none!important;
+		appearance:none!important;
+		border:1px solid #0b6fb8;
+		background:#0084dd;
+		color:#ffffff;
+		font-size:16px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-weight:700;
+		line-height:30px;
+		text-align:center;
+		padding:0;
+		z-index:1005;
+		display:block;
+		box-shadow:0 8px 18px rgba(6, 31, 68, 0.42), inset 0 1px 0 rgba(255,255,255,0.24);
+		transition:transform 120ms ease, filter 120ms ease, box-shadow 120ms ease;
+	}
+
+	.ropro-modal-close:hover,
+	.ropro-modal-close:focus{
+		cursor:pointer;
+		filter:brightness(1.08);
+		transform:translateY(-1px);
+		box-shadow:0 10px 20px rgba(6, 31, 68, 0.5), inset 0 1px 0 rgba(255,255,255,0.3);
+		outline:none;
+	}
+
+	.ropro-support-modal{
+		width:min(500px, 94vw)!important;
+		max-height:86vh!important;
+		background:#2f353a!important;
+		border:1px solid #4f565d!important;
+		border-radius:14px!important;
+		box-shadow:0 12px 32px rgba(0, 0, 0, 0.45)!important;
+	}
+
+	.ropro-support-modal .content{
+		background:#2e353b!important;
+		border-radius:14px!important;
+		padding:22px 22px 16px!important;
+		height:min(80vh, 560px)!important;
+		max-height:80vh!important;
+		overflow:hidden!important;
+		display:flex;
+		flex-direction:column;
+	}
+
+	.ropro-support-modal-body{
+		flex:1 1 auto;
+		min-height:0;
+		overflow-y:auto;
+		padding-right:2px;
+		padding-bottom:6px;
+	}
+
+	.ropro-support-modal-title{
+		font-size:22px;
+		font-family:RalewayBold;
+		text-align:left;
+		margin-bottom:8px;
+	}
+
+	.ropro-support-modal-note{
+		font-size:13px;
+		font-family:RalewayMedium;
+		text-align:left;
+		line-height:1.45em;
+		color:#d8dde3;
+		margin:0 0 14px 0;
+	}
+
+	.ropro-support-modal-field{
+		margin-bottom:12px;
+	}
+
+	.ropro-support-modal-label{
+		display:block;
+		text-align:left;
+		font-family:RalewayBold;
+		font-size:13px;
+		margin-bottom:6px;
+		color:#f2f4f6;
+	}
+
+	.ropro-support-modal-input{
+		width:100%;
+		font-size:12px;
+		font-family:RalewayMedium;
+		color:#ffffff;
+		background:#23292d;
+		border:1px solid #5a6168;
+		border-radius:8px;
+		padding:8px 10px;
+		box-sizing:border-box;
+	}
+
+	.ropro-support-modal-input:focus{
+		outline:none;
+		border-color:#9cbef2;
+		box-shadow:0 0 0 2px rgba(156, 190, 242, 0.24);
+	}
+
+	.ropro-support-modal-input option{
+		color:#ffffff;
+		background:#23292d;
+	}
+
+	.ropro-support-modal-input::selection{
+		background:#2f7fd2;
+		color:#ffffff;
+	}
+
+	.ropro-support-modal-input::-moz-selection{
+		background:#2f7fd2;
+		color:#ffffff;
+	}
+
+	textarea.ropro-support-modal-input{
+		resize:vertical;
+		min-height:70px;
+	}
+
+	.ropro-support-modal-counter{
+		font-size:11px;
+		font-family:RalewayMedium;
+		text-align:right;
+		color:#a7b0b8;
+		margin-top:4px;
+	}
+
+	.ropro-support-modal-footer{
+		display:grid;
+		grid-template-columns:minmax(0, 1fr) auto;
+		grid-column-gap:12px;
+		align-items:center;
+		margin-top:10px;
+		padding-top:10px;
+		padding-bottom:2px;
+		border-top:1px solid rgba(114, 126, 138, 0.45);
+		background:#2e353b;
+		position:sticky;
+		bottom:0;
+		z-index:1;
+		flex-shrink:0;
+	}
+
+	.ropro-support-status{
+		text-align:left;
+		font-size:12px;
+		font-family:RalewayMedium;
+		min-height:16px;
+		margin:0;
+		word-break:break-word;
+	}
+
+	.ropro-support-status-error{
+		color:#ff9191;
+	}
+
+	.ropro-support-status-success{
+		color:#9fe6b1;
+	}
+
+	.ropro-support-status-info{
+		color:#c7d9ff;
+	}
+
+	.ropro-support-submit-button{
+		min-width:150px!important;
+		font-size:13px!important;
+		font-family:RalewayBold!important;
+		color:#ffffff!important;
+		background:#0084dd!important;
+		border:1px solid #0b6fb8!important;
+		border-radius:10px!important;
+		box-shadow:0 9px 18px rgba(7, 40, 88, 0.45), inset 0 1px 0 rgba(255,255,255,0.3)!important;
+		text-shadow:0 1px 0 rgba(0,0,0,0.32)!important;
+		transition:transform 120ms ease, filter 120ms ease, box-shadow 120ms ease;
+	}
+
+	.ropro-support-submit-button:hover,
+	.ropro-support-submit-button:focus{
+		background:#0076c7!important;
+		filter:brightness(1.03);
+		transform:translateY(-1px);
+		box-shadow:0 11px 20px rgba(7, 40, 88, 0.52), inset 0 1px 0 rgba(255,255,255,0.35)!important;
+		outline:none;
+	}
+
+	.ropro-support-submit-button:disabled{
+		opacity:0.74;
+		cursor:wait!important;
+		transform:none;
+		filter:none;
+		box-shadow:inset 0 1px 0 rgba(255,255,255,0.22), 0 2px 4px rgba(0,0,0,0.25)!important;
+	}
+
+	.ropro-support-launch-button{
+		font-family:RalewayBold!important;
+		color:#f7fbff!important;
+		background:#0084dd!important;
+		border:1px solid #0b6fb8!important;
+		border-radius:10px!important;
+		box-shadow:0 6px 14px rgba(7, 40, 88, 0.4), inset 0 1px 0 rgba(255,255,255,0.28)!important;
+		text-shadow:0 1px 0 rgba(0,0,0,0.28)!important;
+		transition:transform 120ms ease, filter 120ms ease;
+	}
+
+	.ropro-support-launch-button:hover,
+	.ropro-support-launch-button:focus{
+		background:#0076c7!important;
+		filter:brightness(1.02);
+		transform:translateY(-1px);
+		outline:none;
+	}
+
+	.ropro-support-launch-button-green{
+		background:#21ba45!important;
+		border:1px solid #149737!important;
+		box-shadow:0 6px 14px rgba(10, 67, 26, 0.4), inset 0 1px 0 rgba(255,255,255,0.24)!important;
+	}
+
+	.ropro-support-launch-button-green:hover,
+	.ropro-support-launch-button-green:focus{
+		background:#16ab39!important;
+	}
+	
+	.tabcontent{
+	  background:#3A3F44!important;
+	  color:white!important;
+	}
+
+	.ui.inverted.modal.ropro_verification_modal .content img.ropro-verify-card-image{
+		display:block !important;
+		width:100% !important;
+		min-width:0 !important;
+		max-width:100% !important;
+		height:auto !important;
+		max-height:none !important;
+		margin:0 auto !important;
+	}
+
+	.ui.inverted.modal.ropro_verification_modal .content a img.ropro-roblox-link-icon{
+		display:inline !important;
+		width:17px !important;
+		min-width:17px !important;
+		max-width:17px !important;
+		height:17px !important;
+		min-height:17px !important;
+		max-height:17px !important;
+		vertical-align:text-bottom !important;
+		object-fit:contain !important;
+		margin:0 !important;
+	}
+
+	.ui.inverted.modal.ropro_verification_modal .content button img.ropro-play-button-image{
+		display:block !important;
+		width:120px !important;
+		min-width:120px !important;
+		max-width:120px !important;
+		height:auto !important;
+		max-height:24px !important;
+		object-fit:contain !important;
+		margin:0 auto !important;
+	}
+	
+    div:first-child {
+      margin-top: 0px;
+    }
+	/* Chrome, Safari, Edge, Opera */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+	}
+
+	/* Firefox */
+	input[type=number] {
+	-moz-appearance: textfield;
+	}
+    </style>
+	<link rel="stylesheet" type="text/css" href="./css/libraries/semantic.css">
+	<script src="./js/libraries/jquery-3.5.1.min.js"></script>
+    <script src="./js/libraries/semantic.js"></script>
+	<script src="./js/shared/roproApiAdapter.js"></script>
+  </head>
+  <body class="optionsbody">
+	<div class="ui inverted modal playtime_tracking_modal" style="background:#3A3F44!important;width:343px;"><div style="background:#3A3F44!important;" class="content"><img style='width:300px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Keeps track of how many minutes & hours you spend in a game.</li><li>Shows how many hours you've played in the last week.</li></ul></div></div>
+	<div class="ui inverted modal clear_cache_modal" style="background:#232527!important;width:380px;">
+		<div class="content" style="background:#232527!important;padding:24px;">
+			<h3 style="text-align:center;font-size:18px;font-weight:bold;margin-top:0;margin-bottom:12px;color:#e53935;">Clear Extension Cache</h3>
+			<p style="text-align:center;font-size:13px;font-family:RalewayMedium;line-height:1.5em;margin:0 auto 16px auto;width:320px;">This will clear all cached data and sign you out of RoPro. You will need to <strong>re-verify your account</strong> after clearing.</p>
+			<p style="text-align:center;font-size:13px;font-family:RalewayMedium;line-height:1.5em;margin:0 auto 16px auto;width:320px;">Your <strong>play time data</strong>, <strong>settings</strong>, and <strong>Roblox account</strong> will not be affected.</p>
+			<p style="text-align:center;font-size:12px;font-family:RalewayMedium;line-height:1.4em;color:#aaa;margin:0 auto 20px auto;width:320px;">Use this if you're experiencing issues that a normal reload doesn't fix.</p>
+			<div style="display:flex;justify-content:center;gap:12px;">
+				<button id="clearCacheCancel" class="ui button" style="background:#555;color:white;font-size:13px;padding:8px 20px;border-radius:8px;">Cancel</button>
+				<button id="clearCacheConfirm" class="ui button" style="background:#c62828;color:white;font-size:13px;padding:8px 20px;border-radius:8px;font-weight:bold;">Clear Cache & Reload</button>
+			</div>
+		</div>
+	</div>
+	<div class="ui inverted modal ropro_verification_modal" style="background:#232527!important;width:350px;">
+		<div class="content ropro-verification-modal" style="background:#232527!important;height:220px;">
+			<div class="ropro-verification-modal-start" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;">
+				<h3 style="text-align:center;width:100%;font-size:20px;font-weight:bold;margin-top:0;margin-bottom:12px;">Verify your account</h3>
+				<p style="text-align:center;font-size:12px;font-family:RalewayMedium;line-height:1.45em;margin:0 auto 12px auto;width:280px;">RoPro features won't work until you verify your account in game.</p>
+				<div class="ropro-verification-modal-ingame-button" style="width:280px;border-radius:10px;overflow:hidden;cursor:pointer;">
+					<img src="./images/game_verification.svg" class="ropro-verify-card-image">
+				</div>
+			</div>
+			<div class="ropro-verification-modal-ingame" style="display:none;">
+				<h3 style="width:100%;font-size:23px;font-weight:bold;margin-top:35px;margin-bottom:10px;text-align:center;">Emoji Verification Code</h3>
+				<div style="width:100%;">
+					<form style="text-align:center;">
+						<input class="ropro-code-entry" type="text" id="ropro-verification-emoji-1" name="ropro-verification-emoji-1" data-next="ropro-verification-emoji-2" data-previous="none" placeholder="🤍" style="height:36px;width:36px;padding:5px;border-radius:10px;margin:2px;text-align:center;border:1px solid #636363;">
+						<input class="ropro-code-entry" type="text" id="ropro-verification-emoji-2" name="ropro-verification-emoji-2" data-next="ropro-verification-emoji-3" data-previous="ropro-verification-emoji-1" placeholder="🤍" style="height:36px;width:36px;padding:5px;border-radius:10px;margin:2px;text-align:center;border:1px solid #636363;">
+						<input class="ropro-code-entry" type="text" id="ropro-verification-emoji-3" name="ropro-verification-emoji-3" data-next="ropro-verification-emoji-4" data-previous="ropro-verification-emoji-2" placeholder="🤍" style="height:36px;width:36px;padding:5px;border-radius:10px;margin:2px;text-align:center;border:1px solid #636363;">
+						<span style="margin:2.5px;">-</span>
+						<input class="ropro-code-entry" type="text" id="ropro-verification-emoji-4" name="ropro-verification-emoji-4" data-next="ropro-verification-emoji-5" data-previous="ropro-verification-emoji-3" placeholder="🤍" style="height:36px;width:36px;padding:5px;border-radius:10px;margin:2px;text-align:center;border:1px solid #636363;">
+						<input class="ropro-code-entry" type="text" id="ropro-verification-emoji-5" name="ropro-verification-emoji-5" data-next="ropro-verification-emoji-6" data-previous="ropro-verification-emoji-4" placeholder="🤍" style="height:36px;width:36px;padding:5px;border-radius:10px;margin:2px;text-align:center;border:1px solid #636363;">
+						<input class="ropro-code-entry" type="text" id="ropro-verification-emoji-6" name="ropro-verification-emoji-6" data-next="ropro-verification-emoji-7" data-previous="ropro-verification-emoji-5" placeholder="🤍" style="height:36px;width:36px;padding:5px;border-radius:10px;margin:2px;text-align:center;border:1px solid #636363;">
+						<span style="margin:2.5px;">-</span>
+						<input class="ropro-code-entry" type="text" id="ropro-verification-emoji-7" name="ropro-verification-emoji-7" data-next="ropro-verification-emoji-8" data-previous="ropro-verification-emoji-6" placeholder="🤍" style="height:36px;width:36px;padding:5px;border-radius:10px;margin:2px;text-align:center;border:1px solid #636363;">
+						<input class="ropro-code-entry" type="text" id="ropro-verification-emoji-8" name="ropro-verification-emoji-8" data-next="ropro-verification-emoji-9" data-previous="ropro-verification-emoji-7" placeholder="🤍" style="height:36px;width:36px;padding:5px;border-radius:10px;margin:2px;text-align:center;border:1px solid #636363;">
+						<input class="ropro-code-entry" type="text" id="ropro-verification-emoji-9" name="ropro-verification-emoji-9" data-next="none" data-previous="ropro-verification-emoji-8" placeholder="🤍" style="height:36px;width:36px;padding:5px;border-radius:10px;margin:2px;text-align:center;border:1px solid #636363;">
+					</form>
+					<div class="ropro-ingame-verification-message" style="text-align:center;font-size:14px;margin-top:15px;font-weight:500;"></div>
+				</div>
+				<div style="padding:12px;border-radius:10px;margin:auto;width:330px;margin-top:15px;background-color:#191B1D;">
+					<div><p style="font-size:15px;text-align:center;">RoPro features won't work until you open <a target="_blank" rel="noopener noreferrer" href="https://roblox.com/games/16699976687/RoPro-User-Verification" style="font-weight:bold;">RoPro User Verification <img src="./images/roblox_link.svg" class="ropro-roblox-link-icon"></a>, copy the emoji code, and paste it here.</p></div>
+				</div>
+				<a href="https://www.roblox.com/games/16699976687/" target="_blank" rel="noopener noreferrer" style="display:block;width:330px;margin:8px auto 0 auto;"><button style="border:none;background-color:#0084DC;border-radius:10px;height:45px;width:100%;cursor:pointer;"><img src="./images/play.svg" class="ropro-play-button-image"></button></a>
+			</div>
+		</div>
+	</div>
+		<div class="ui inverted modal most_popular_sort_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Shows the most popular experiences across Roblox near the top of the discover page.</li><li>Refreshes rankings as player activity changes so the list stays current.</li></ul></div></div>
+	<div class="ui inverted modal most_played_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Display the experiences you play the most right on your homepage!</li><li>Easily access the experiences you want to play without having to find them.</li></ul></div></div>
+	<div class="ui inverted modal ropro_voice_servers_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>RoPro Voice Servers are private Roblox servers owned by RoPro on popular voice enabled experiences. These servers are only accessible to RoPro users with Voice Chat enabled on their Roblox account.</li><li>Acts as a fast entry path to dedicated community servers where you have voice support.</li></ul></div></div>
+	<div class="ui inverted modal ropro_cloud_play_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Play Roblox in your browser.</li><li>This feature is only available for players in select regions, with more regions coming soon.</li><li>Affiliate disclosure: RoPro Cloud Play uses a now.gg affiliate link.</li></ul></div></div>
+	<div class="ui inverted modal ropro_wishlist_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Track limited items you want in your RoPro wishlist.</li><li>Quickly revisit watched items and monitor price movement.</li></ul></div></div>
+		<div class="ui inverted modal hide_private_servers_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Filters private server entries from your server list.</li><li>Helps you focus on joinable public sessions faster.</li></ul></div></div>
+		<div class="ui inverted modal experience_quick_play_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds quick play buttons when hovering experience thumbnails.</li><li>Lets you launch a game directly from browse views without opening its detail page.</li></ul></div></div>
+	<div class="ui inverted modal experience_quick_search_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src='' title='ropro_search_v2.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Get better dropdowns with live search suggestions as you type.</li><li>Press the quick play or random non-full server button to automatically join the experience.</li></ul></div></div>
+	<div class="ui inverted modal server_filters_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src='' title='new_server_filters_icon.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds several free server list filtering options.</li><li>Quickly narrow servers by available space, Max Players, Minimum Players, random shuffle, and best-connection sorting.</li><li>Filters can be combined so you can zero in on the right session before joining.</li></ul></div></div>
+		<div class="ui inverted modal avatar_editor_changes_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src='' title='avatar_edited_changes_modal.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds customizable avatar editor backgrounds and related editor tweaks.</li><li>Shows outfit cost while you test combinations, helping fast comparisons.</li></ul></div></div>
+	<div class="ui inverted modal more_playtime_sorts_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>See your most played experiences of the past month, year, and all time!</li><li>Easily access the experiences you want to play without having to find them.</li></ul></div></div>
+	<div class="ui inverted modal more_mutuals_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>View the favorite experiences, groups, items, limiteds, and more than you share with another user on their friends page!</li><li>Use this overlap data to compare interests before trading, inviting, or checking trust signals.</li></ul></div></div>
+	<div class="ui inverted modal sandbox_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Try on any combo before you buy it</li><li>Renders 3D avatar preview & customizable background</li></ul></div></div>
+	<div class="ui inverted modal genre_filter_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src='' title='genre_search_image.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Filter experiences by their genre</li><li>RoPro will actively filter out other genres while you browse.</li></ul></div></div>
+	<div class="ui inverted modal server_invite_links_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Create a custom server invite link to invite other users to a particular experience server</li><li>Share your link on desktop, tablet, or mobile!</li></ul></div></div>
+	<div class="ui inverted modal most_recent_server_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Automatically save your most recent active server on each game</li><li>Easily rejoin a server you left or got disconnected from</li></ul></div></div>
+	<div class="ui inverted modal random_server_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Join a random non-full server of a game</li><li>Avoids Roblox automatically placing you in servers with your friends, useful for server hopping</li></ul></div></div>
+	<div class="ui inverted modal random_game_modal" style="background:#3A3F44!important;width:430px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Bored? Roll the dice to find a random game</li><li>Choose the range of experiences you want to roll for</li></ul></div></div>
+	<div class="ui inverted modal popular_today_modal" style="background:#3A3F44!important;width:430px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Shows the most popular experiences with RoPro users today</li><li>experiences are sorted by the amount of hours played by RoPro users (who have experience playtime tracking enabled) in the last 24 hours!</li></ul></div></div>
+		<div class="ui inverted modal mutual_friends_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>View friends shared with another user from their profile and friends page.</li><li>Quickly identify overlap before sending invites or starting a trade.</li></ul></div></div>
+		<div class="ui inverted modal ropro_reputation_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src='' title='reputation.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>View and vote on the RoPro reputation of other users.</li><li>Use reputation context as a trust aid when checking profiles or trade requests.</li></ul></div></div>
+	<div class="ui inverted modal last_online_modal" style="background:#3A3F44!important;width:760px;"><div style="background:#3A3F44!important;" class="content"><div style='font-size:18px;font-family:RalewayBold;text-align:left;margin-bottom:8px;'>Feature Details</div><p style='margin-top:0px;margin-bottom:8px;font-size:13px;font-family:RalewayMedium;text-align:left;line-height:1.45em;'>Show when users were last active inside RoPro.</p><br><ul style='margin:0px;padding-left:18px;font-size:13px;font-family:RalewayMedium;text-align:left;line-height:1.45em;'><li style='margin-bottom:8px;'>Displays RoPro Last Online on user profiles and friends cards when enabled.</li><li style='margin-bottom:8px;'>RoPro Last Online times use each viewer's browser local timezone automatically.</li><li>Works with privacy and visibility controls to share only what you want each viewer to see.</li></ul><img style='width:100%;max-width:720px;border-radius:8px;border:1px solid #54585D;margin-top:8px;' src='' alt='Sample screenshot of RoPro Last Online profile display'></div></div>
+		<div class="ui inverted modal quick_decline_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Quickly decline inbound trades, useful against trade botters.</li><li>Works as a fast cleanup path for low-value or suspicious trade rows.</li><li>Runs on visible inbound rows so you can clear many offers in one pass.</li></ul></div></div>
+		<div class="ui inverted modal quick_cancel_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Quickly cancel outbound trades, useful for reducing trade noise.</li><li>Supports safe cleanup when offers are stale or no longer fit your plan.</li><li>Lets you keep your outbound panel tidy while preserving offers you still want to track.</li></ul></div></div>
+	<div class="ui inverted modal more_trade_panel_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds advanced Trade Panel automation controls for RoPro Rex.</li><li>Includes threshold automation, projected filtering, and faster inbound cleanup actions.</li></ul></div></div>
+	<div class="ui inverted modal trade_panel_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds quick trading actions directly inside the trade window.</li><li>Includes bulk decline/cancel actions and faster trading workflows.</li><li>Brings core cleanup controls to the same surface as row-level offer actions.</li></ul></div></div>
+	<div class="ui inverted modal item_info_card_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds a compact item info card in trades with charts and recent item context.</li><li>Available for RoPro Plus and RoPro Rex users.</li></ul></div></div>
+		<div class="ui inverted modal trade_age_modal" style="background:#3A3F44!important;width:343px;"><div style="background:#3A3F44!important;" class="content"><img style='width:300px;' src='' title='trade_history_image.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>View how long ago a trade was created on the sidebar.</li><li>Use age context to prioritize fresh trades over older ones.</li></ul></div></div>
+		<div class="ui inverted modal link_discord_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Link your Discord username to your profile (no legacy #1234 tag)</li><li>Other RoPro users will see this Discord username when visiting your profile</li><li>Note: To comply with the Roblox TOS, this feature is disabled for <13 Roblox users</li></ul></div></div>
+	<div class="ui inverted modal profile_discord_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Quickly view and contact other RoPro users on discord</li><li>Note: To comply with the Roblox TOS, this feature is disabled for <13 Roblox users</li></ul></div></div>
+		<div class="ui inverted modal trade_offers_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src='' title='trade_board_plus.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>View RoPro Trade Board listings on the custom Trade Board page at /board/.</li><li>Use filter tools to quickly narrow posts and find matching offers.</li></ul></div></div>
+		<div class="ui inverted modal trade_offers_rex_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src='' title='post_trade_board.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Post your own listings on the Trade Board from the /board/ page.</li><li>Create and publish offers quickly with your selected send/receive items.</li></ul></div></div>
+		<div class="ui inverted modal trade_board_more_options_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src='' title='trade_board_more_options.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds more Trade Board options, including adding your own items directly in the flow.</li><li>Lets you add wishlist items and other offer options from the same panel.</li></ul></div></div>
+	<div class="ui inverted modal profile_value_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>View total limited item value of a user on their profile</li><li>Note: Values are calculated by RoPro using updated Rolimons.com item values</li></ul></div></div>
+	<div class="ui inverted modal projected_item_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>View projected warning on item pages</li><li>Note: Projected items are determined using the Rolimons.com projected label</li></ul></div></div>
+	<div class="ui inverted modal quick_trade_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds a quick trade button to item seller cards for sellers with trades enabled.</li><li>Starts a trade flow straight from the listing, saving clicks.</li></ul></div></div>
+	<div class="ui inverted modal hide_serials_modal" style="background:#3A3F44!important;width:343px;"><div style="background:#3A3F44!important;" class="content"><img style='width:300px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds toggleable button to blur out the serial number of items</li><li>Useful for users who want to screenshot a trade but don't want their or their trade partner's accounts to be known</li></ul></div></div>
+	<div class="ui inverted modal group_rank_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Integrates the group rank of each user on the group wall.</li><li>Helps you spot admin/owner roles quickly while reviewing members.</li></ul></div></div>
+	<div class="ui inverted modal group_discord_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Integrates discord server embed onto group page</li><li>If group discord embed doesn't load, please ask the owner of the discord server to enable embeds in settings</li><li>Note: To comply with the Roblox TOS, this feature is disabled for <13 Roblox users</li></ul></div></div>
+	<div class="ui inverted modal server_size_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Sort server lists by the maximum number of players</li><li>Useful for users trying to join low player count servers, or trying to find a server while playing with a group</li></ul></div></div>
+		<div class="ui inverted modal fastest_servers_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src='' title='best_connection_server_filter.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Sort servers by fastest connection (ping)</li><li>Useful for users trying to find the lowest latency servers to play in</li><li>Works alongside ping visibility so you can compare connection quality as you scan.</li><li>Ping shown by RoPro is Roblox's ping to that server, not your personal ping, but it can still help estimate connection speed.</li></ul></div></div>
+	<div class="ui inverted modal more_filters_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds additional experience filters along-side the Genre Filters that Free Tier users get</li><li>Some filters include: Single-player experiences, Paid access experiences, Classic experiences, Recently updated experiences, Gear allowed experiences</li></ul></div></div>
+		<div class="ui inverted modal additional_server_info_modal" style="background:#3A3F44!important;width:443px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src='' title='new_server_ping_image.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds additional info to each server on the server list.</li><li>Server ping is shown directly in the server list, with best-connection sorting and ping visibility on RoPro Plus and RoPro Rex.</li><li>Ping shown by RoPro is Roblox's ping to that server, not your personal ping, but it can still help estimate connection speed.</li></ul></div></div>
+		<div class="ui inverted modal more_server_filters_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src='' title='new_server_filters_icon.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds a best-connection server filter.</li><li>Includes multi-select filters for available space, Max Players, Minimum Players, random shuffle, best-connection sorting, and live ping visibility.</li><li>Ping shown by RoPro is Roblox's ping to that server, not your personal ping, but it can still help estimate connection speed.</li></ul></div></div>
+	<div class="ui inverted modal theme_color_adjustments_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adjust your RoPro theme by selecting hue, saturation, and lightness.</li><li>Other users will see these adjustments when they visit your profile.</li></ul></div></div>
+	<div class="ui inverted modal like_filter_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Filter experiences by the like/dislike ratio</li><li>Useful for users who only want to see the highest quality experiences</li><li>Scroll as you normally would, RoPro will actively filter experiences below the chosen like/dislike ratio</li></ul></div></div>
+	<div class="ui inverted modal quick_user_search_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Quickly visit a user's profile by typing in their username</li><li>Useful if you want to avoid getting hashtagged when trying to find a user by username</li></ul></div></div>
+	<div class="ui inverted modal live_like_counter_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Live updates like and dislike counts while experience data refreshes.</li><li>Helps you spot fast-moving community sentiment without reloading.</li></ul></div></div>
+	<div class="ui inverted modal animated_profile_themes_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Customize your Roblox profile with animated themes</li><li>Other RoPro users will see your theme when they visit your profile</li></ul></div></div>
+	<div class="ui inverted modal sandbox_outfits_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Name and save your sandbox outfits.</li><li>Store multiple custom combinations for fast reuse while testing looks.</li></ul></div></div>
+	<div class="ui inverted modal sandbox_bundles_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Equip bundles/packages in the Avatar Sandbox.</li><li>Quickly apply full setups to speed up outfit testing.</li></ul></div></div>
+		<div class="ui inverted modal trade_search_modal" style="background:#3A3F44!important;width:330px;"><div style="background:#3A3F44!important;" class="content"><img style='width:300px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Quickly search for limiteds in the trade window.</li><li>Filter candidate rows faster when you are building balanced offers.</li></ul></div></div>
+		<div class="ui inverted modal advanced_trade_search_modal" style="background:#3A3F44!important;width:330px;"><div style="background:#3A3F44!important;" class="content"><img style='width:300px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Adds a quick dropdown list of your limiteds to the trade search bar.</li><li>Click an item to instantly filter the trade window to matching rows.</li></ul></div></div>
+		<div class="ui inverted modal trade_value_demand_modal" style="background:#3A3F44!important;width:330px;"><div style="background:#3A3F44!important;" class="content"><img style='width:300px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Shows Rolimons.com item values and demand in trades and the trade window.</li><li>Displays both metrics side by side so decisions are faster and more consistent.</li></ul></div></div>
+		<div class="ui inverted modal trade_calculator_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Calculates the total trade value and demand in real-time in trades and the trade window.</li><li>Updates totals immediately as either side changes.</li></ul></div></div>
+		<div class="ui inverted modal item_value_demand_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Integrates each item's Rolimons.com value and demand into the Roblox item page.</li><li>Useful for quick pricing context before you list, buy, or trade.</li></ul></div></div>
+	<div class="ui inverted modal projected_trade_modal" style="background:#3A3F44!important;width:330px;"><div style="background:#3A3F44!important;" class="content"><img style='width:300px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>View projected item warnings in trades & the trade window</li><li>Note: Projected items are determined using the Rolimons.com projected label</li></ul></div></div>
+		<div class="ui inverted modal embedded_roli_item_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Integrates direct links to the Rolimons.com item page in trades, trade window, and item page.</li><li>Provides one-click access to value history without leaving your current view.</li></ul></div></div>
+	<div class="ui inverted modal embedded_roli_user_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Integrates direct links to the Rolimons.com user page on the trade sidebar.</li><li>Supports quick profile checks without navigating away from your current trade view.</li></ul></div></div>
+		<div class="ui inverted modal ropro_trade_offers_value_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src='' title='trade_board_integrated_value_calculation.png'><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Integrates Rolimons.com item values and calculates the total value of a Trade Board post on the Trade Board page.</li><li>Shows each post's total instantly so offers are easier to compare.</li></ul></div></div>
+	<div class="ui inverted modal live_playing_visit_count_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Updates the playing and visit counters on experiences as they refresh.</li><li>Displays live room activity so active games are easier to spot at a glance.</li></ul></div></div>
+	<div class="ui inverted modal trade_preview_modal" style="background:#3A3F44!important;width:275px;"><div style="background:#3A3F44!important;" class="content"><img style='width: 250px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Shows a win/loss value preview for each trade row.</li><li>Helps prioritize which trades to review first.</li></ul></div></div>
+	<div class="ui inverted modal quick_item_search_modal" style="background:#3A3F44!important;width:430px;"><div style="background:#3A3F44!important;" class="content"><img style='width:400px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Quickly visit an item page by typing in the search bar</li><li>Works if you enter an item's acronym or just part of an item's name</li></ul></div></div>
+	<div class="ui inverted modal trade_notifier_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Sends desktop alerts for new inbound and outbound trades.</li><li>Includes value context and quick decline/cancel actions from the notification.</li><li>Use the notification toggles to reduce noise from declined trade updates.</li></ul></div></div>
+	<div class="ui inverted modal trade_notifier_setup_guide_modal" style="background:#3A3F44!important;width:420px;"><div style="background:#3A3F44!important;" class="content"><div style='font-size:18px;font-family:RalewayBold;text-align:left;'>Trade Notifier Note</div><p style='margin-top:8px;margin-bottom:8px;font-size:13px;font-family:RalewayMedium;text-align:left;line-height:1.45em;'>If notifications are missing, verify both settings:</p><ol style='margin:0px;padding-left:18px;font-size:13px;font-family:RalewayMedium;text-align:left;line-height:1.5em;'><li style='margin-bottom:10px;'>Enable device-level Chrome notifications.<div style='margin-top:6px;'><img style='width:100%;max-width:360px;max-height:110px;object-fit:contain;border-radius:8px;border:1px solid #54585D;' src='./images/trade_notifier_device_notifications.svg' alt='Chrome notification settings screenshot'></div></li><li>Disable Do Not Disturb mode.<div style='margin-top:6px;'><img style='width:100%;max-width:360px;max-height:110px;object-fit:contain;border-radius:8px;border:1px solid #54585D;' src='./images/trade_notifier_focus_dnd.svg' alt='Do Not Disturb settings screenshot'></div></li></ol></div></div>
+	<div class="ui inverted modal suspected_bot_badges_modal" style="background:#3A3F44!important;width:760px;"><div style="background:#3A3F44!important;" class="content"><div style='font-size:18px;font-family:RalewayBold;text-align:left;margin-bottom:8px;'>Feature Details</div><p style='margin-top:0px;margin-bottom:8px;font-size:13px;font-family:RalewayMedium;text-align:left;line-height:1.45em;'>Mark and prioritize suspicious trade rows at a glance.</p><br><ul style='margin:0px;padding-left:18px;font-size:13px;font-family:RalewayMedium;text-align:left;line-height:1.45em;'><li style='margin-bottom:8px;'>Adds inline suspected-bot badges directly into trade lists.</li><li style='margin-bottom:8px;'>Shows different badge levels so you can spot high-risk rows faster.</li><li>Pairs with your trade-list view so you can make safer trade decisions before opening a row.</li></ul><img style='width:100%;max-width:720px;border-radius:8px;border:1px solid #54585D;margin-top:8px;' src='./images/suspected_bot_badges_toggle_sample.png' alt='Sample screenshot of suspected bot badges in trade rows'></div></div>
+	<div class="ui inverted modal autodecline_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Automatically declines bad inbound trades.</li><li>Uses your configured thresholds so lower-value trades are filtered quickly.</li><li>Runs continuously while the page is open so cleanup keeps pace with new inbound offers.</li></ul></div></div>
+	<div class="ui inverted modal outbound_protection_modal" style="background:#3A3F44!important;width:543px;"><div style="background:#3A3F44!important;" class="content"><img style='width:500px;' src=''><br><div style='float:left;font-size:20px;font-family:RalewayBold;margin-top:10px;'>Feature Details</div><br><br><ul style='float:left;font-size:15px;font-family:RalewayMedium;text-align:left;line-height:1.5em;margin-top:10px;'><li>Monitors your outbound trades for bad trades and automatically cancels them</li><li>Useful for users worried about their account being compromised</li><li>As long as Chrome is open, bad trades will be automatically cancelled within seconds</li></ul></div></div>
+		<div class="ui inverted modal ropro-support-modal bug_report_modal">
+			<div class="content">
+				<div class='ropro-support-modal-title'>Bug Report</div>
+				<div class='ropro-support-modal-body'>
+					<p class='ropro-support-modal-note'>Tell us what broke. Keep it short and simple.</p>
+					<div class='ropro-support-modal-field'>
+						<label class='ropro-support-modal-label' for='bugReportFeature'>Related feature</label>
+						<select id='bugReportFeature' class='ropro-support-modal-input'>
+							<option value='general'>General / Not sure</option>
+							<option value='trading'>Trading</option>
+							<option value='profile'>Profile / Friends</option>
+							<option value='themes'>Themes</option>
+							<option value='sandbox'>Avatar Sandbox</option>
+							<option value='game_servers'>Game / Server tools</option>
+							<option value='subscription'>Account / Subscription</option>
+						</select>
+					</div>
+					<div class='ropro-support-modal-field'>
+						<label class='ropro-support-modal-label' for='bugReportDescription'>What went wrong?</label>
+						<textarea id='bugReportDescription' class='ropro-support-modal-input' rows='4' maxlength='600' placeholder='Example: Trade Notifier is not showing new trades.'></textarea>
+						<div id='bugReportDescriptionCounter' class='ropro-support-modal-counter'>0/600</div>
+					</div>
+					<div class='ropro-support-modal-field'>
+						<label class='ropro-support-modal-label' for='bugReportSteps'>Steps to reproduce</label>
+						<textarea id='bugReportSteps' class='ropro-support-modal-input' rows='5' maxlength='900' placeholder='1) Open ...&#10;2) Click ...&#10;3) It should ..., but ...'></textarea>
+						<div id='bugReportStepsCounter' class='ropro-support-modal-counter'>0/900</div>
+					</div>
+				</div>
+				<div class='ropro-support-modal-footer'>
+					<p id='bugReportStatus' class='ropro-support-status' aria-live='polite'></p>
+					<button id='submitBugReport' class='ui button ropro-support-submit-button'>Send Bug Report</button>
+				</div>
+			</div>
+		</div>
+		<div class="ui inverted modal ropro-support-modal feature_request_modal">
+			<div class="content">
+				<div class='ropro-support-modal-title'>Feature Request</div>
+				<div class='ropro-support-modal-body'>
+					<p class='ropro-support-modal-note'>Share an idea for RoPro. Keep it clear and easy to understand.</p>
+					<div class='ropro-support-modal-field'>
+						<label class='ropro-support-modal-label' for='featureRequestIdea'>What should we add?</label>
+						<textarea id='featureRequestIdea' class='ropro-support-modal-input' rows='4' maxlength='600' placeholder='Example: Add a filter to show only limited accessories.'></textarea>
+						<div id='featureRequestIdeaCounter' class='ropro-support-modal-counter'>0/600</div>
+					</div>
+					<div class='ropro-support-modal-field'>
+						<label class='ropro-support-modal-label' for='featureRequestReason'>Why should we add it?</label>
+						<textarea id='featureRequestReason' class='ropro-support-modal-input' rows='5' maxlength='900' placeholder='Example: It helps users quickly find items they can trade.'></textarea>
+						<div id='featureRequestReasonCounter' class='ropro-support-modal-counter'>0/900</div>
+					</div>
+				</div>
+				<div class='ropro-support-modal-footer'>
+					<p id='featureRequestStatus' class='ropro-support-status' aria-live='polite'></p>
+					<button id='submitFeatureRequest' class='ui button ropro-support-submit-button'>Send Feature Request</button>
+				</div>
+			</div>
+		</div>
+
+    <div class="bodycontent">
+		<a href="https://ropro.io#rex" target="_blank" id="freeTrialBar" style="margin-left:5px;float:left;display: none; width: 70%; top: 0px; z-index: 1000; margin-bottom: 10px; background-color: rgb(209, 163, 0) !important;" class="ui yellow label"></a>
+		<a href="https://ropro.io#plus" target="_blank" id="upgradeTrialBar" style="margin-left:-10px!important;display: none; width: 25%; top: 0px; z-index: 1000; margin-bottom: 10px;" class="ui blue label">Upgrade Now</a>
+		<a href="https://ropro.io#rex" target="_blank" id="freeTrialInfo" style="margin-left: 5px; display:none; width: 96%; top: 0px; z-index: 1000; margin-bottom: 15px; background-color: rgb(209, 163, 0) !important;" class="ui yellow label">When your trial expires you will be converted to Free Tier</a>
+		<div class="" style="position:relative;height:252px;">
+		<div style="position:absolute;left:20px;top:-10px;">
+			<a href="https://ropro.io" target="_blank"><image style="margin-top:10px;width:200px;" src="./images/ropro_logo_small.png"></a>
+			<br>
+			<p id="settingsText" class="whitefont" style="font-size:20px;">Settings</p>
+			<div id="reloadExtension" style="font-size:14px;margin-top:2px;cursor:pointer;"><img src="./images/reload.png" style="margin-bottom:-3px;margin-right:5px;width:15px;filter:invert(1);">Reload Extension</div>
+			<div id="clearExtensionCache" style="font-size:14px;margin-top:14px;cursor:pointer;color:#ff6b6b;"><img src="./images/reload.png" style="margin-bottom:-3px;margin-right:5px;width:15px;filter:brightness(0) invert(1);">Clear Extension Cache</div>
+		</div>
+		<div class="ui raised segment" style="background:#3A3F44!important;position:absolute;right:0px;top:-20px;width:260px;height:260px;">
+			<div style="position:absolute;right:140px;top:2px;">
+				<img id="userIcon" width="80px" src="/images/ropro_icon_animated.webp">
+				<br>
+				<p id="usernameText" style="font-size:12px;font-family:RalewayBold;">Loading...</p>
+			</div>
+			<div style="position:absolute;right:40px;top:2px;">
+				<img id="subscriptionIcon" width="80px" src="/images/ropro_icon_animated.webp">
+				<br>
+				<p id="subscriptionTier" style="font-size:12px;font-family:RalewayBold;">Loading...</p>
+			</div>
+			<div style="position:absolute;left:30px;top:108px;width:208px;display:grid;grid-template-columns:repeat(2,100px);grid-column-gap:8px;grid-row-gap:8px;">
+				<a href="https://ropro.io/subscription" target="_blank">
+					<button style="width:100px;font-size:12px!important;" id="manageSubscription" class="ui primary button ropro-support-launch-button">
+					Manage Subscription
+					</button>
+				</a>
+				<button style="width:100px;font-size:12px!important;" id="activateSubscription" class="ui green button ropro-support-launch-button ropro-support-launch-button-green">
+				  Activate Subscription
+				</button>
+				<a href="https://ropro.io/support" target="_blank">
+					<button style="width:100px;font-size:12px!important;" id="supportButton" class="ui primary button ropro-support-launch-button">
+					Support
+					</button>
+				</a>
+				<a href="https://ropro.io/discord" target="_blank">
+					<button style="width:100px;font-size:12px!important;" id="discordButton" class="ui primary button ropro-support-launch-button">
+						<img style="width:15px;margin:-4px;margin-right:0px;" src = "./images/discordicon.png">
+					Discord
+					</button>
+				</a>
+				<button style="width:100px;font-size:12px!important;" id="bugReportButton" class="ui primary button ropro-support-launch-button">
+					<img style="width:14px;margin:-3px;margin-right:2px;" src="./images/bug_icon.svg" alt="Bug">
+					Bug Report
+				</button>
+				<button style="width:100px;font-size:12px!important;" id="featureRequestButton" class="ui primary button ropro-support-launch-button">
+					Feature Request
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="ui pointing secondary menu inverted">
+	  <a class="active item" data-tab="first" style="flex:1;text-align:center;justify-content:center;"><img src="./images/free_icon.png" style="filter: drop-shadow(2px 2px 2px #363636);width:20px;margin-right:10px;"></img>RoPro Free</a>
+	  <a class="item" data-tab="second" style="flex:1;text-align:center;justify-content:center;"><img src="./images/plus_icon.png" style="filter: drop-shadow(2px 2px 2px #363636);width:20px;margin-right:10px;"></img>RoPro Plus</a>
+	  <a class="item" data-tab="third" style="flex:1;text-align:center;justify-content:center;"><img src="./images/rex_icon.png" style="filter: drop-shadow(2px 2px 2px #363636);width:20px;margin-right:10px;"></img>RoPro Rex</a>
+	</div>
+	<div class="ui top tab segment active tabcontent" data-tab="first">
+		<div class="ui centered grid">
+			<ul style="list-style:none;">
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p class="generalFeatures" style="font-size:18px;font-family:RalewayBold;position:absolute;left:30px;top:5px;border-bottom: 1px solid white;">General Features</p>
+					</li>
+				  <li class="restricted" style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				  <p style="position:absolute;left:30px;top:5px;">Link Discord username (13+)</p>
+				  <div style="position:absolute;right:30px;top:-3px;" id="discordInput" class="ui action input">
+					  <input style="width:160px;" id="discordValue" type="text" placeholder="discord_username">
+					  <button style="padding:5px;" id="saveDiscord" class="ui small primary button">Save</button>
+					</div>
+				  </li>
+				  <li class="restricted" style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				  <p style="position:absolute;left:30px;top:5px;">Show Discord on profiles (13+)<a class="featurePreview" modal="profile_discord" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+				  <div id="linkedDiscord" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+					<input type="checkbox" checked="">
+					<label></label>
+				  </div>
+				  </li>
+			  <li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+			  <p style="position:absolute;left:30px;top:5px;">RoPro Avatar Sandbox<a class="featurePreview" modal="sandbox" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+			  <div id="sandbox" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+				<input type="checkbox" checked="">
+				<label></label>
+			  </div>
+			  </li>
+			  <li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p style="position:absolute;left:30px;top:5px;">Avatar editor changes<a class="featurePreview" modal="avatar_editor_changes" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+				<div id="avatarEditorChanges" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+				  <input type="checkbox" checked="">
+				  <label></label>
+				</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Experience quick play<a class="featurePreview" modal="experience_quick_play" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="experienceQuickPlay" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+					  <input type="checkbox" checked="">
+					  <label></label>
+					</div>
+					</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p style="position:absolute;left:30px;top:5px;">RoPro Search<a class="featurePreview" modal="experience_quick_search" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="experienceQuickSearch" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+					  <input type="checkbox" checked="">
+					  <label></label>
+					</div>
+					</li>
+			  <li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p style="position:absolute;left:30px;top:5px;">Most played experiences on homepage<a class="featurePreview" modal="most_played" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+				<div id="mostPlayedGames" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+				  <input type="checkbox" checked="">
+				  <label></label>
+				</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Experience playtime tracking<a class="featurePreview" modal="playtime_tracking" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="playtimeTracking" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+					  <input type="checkbox" checked="">
+					  <label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;display:none;">
+					<p style="position:absolute;left:30px;top:5px;">All Experiences sort on Discover page</p>
+					<div id="allExperiences" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+					  <input type="checkbox" checked="">
+					  <label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;display:none;">
+					<p style="position:absolute;left:30px;top:5px;">RoPro Shuffle button on Discover page</p>
+					<div id="roproShuffle" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+					  <input type="checkbox" checked="">
+					  <label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Server filters<a class="featurePreview" modal="server_filters" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="serverFilters" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+					  <input type="checkbox" checked="">
+					  <label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Server invite links<a class="featurePreview" modal="server_invite_links" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="serverInviteLinks" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+					  <input type="checkbox" checked="">
+					  <label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Rejoin your most recent server<a class="featurePreview" modal="most_recent_server" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="mostRecentServer" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+					  <input type="checkbox" checked="">
+					  <label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Join random non-full server button<a class="featurePreview" modal="random_server" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="randomServer" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+					  <input type="checkbox" checked="">
+					  <label></label>
+					</div>
+				</li>
+					  <li id="lastOnlinePrivacyRow" style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+						<p style="position:absolute;left:30px;top:5px;">Share my RoPro Last Online<a class="featurePreview" modal="last_online" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+						<div id="lastOnlinePrivacy" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						  <input type="checkbox" checked="">
+						  <label></label>
+						</div>
+						</li>
+				  <li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				  <p style="position:absolute;left:30px;top:5px;">Experience genre filters<a class="featurePreview" modal="genre_filter" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+				  <div id="genreFilters" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+					<input type="checkbox" checked="">
+				<label></label>
+			  </div>
+			  </li>
+			  <li style="display:none;position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+			  <p style="position:absolute;left:30px;top:5px;">Random experience button<a class="featurePreview" modal="random_game" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+			  <div id="randomGame" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+				<input type="checkbox" checked="">
+				<label></label>
+			  </div>
+			  </li>
+			  <li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p style="position:absolute;left:30px;top:5px;">Show popular experiences today<a class="featurePreview" modal="popular_today" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+				<div id="popularToday" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+				  <input type="checkbox" checked="">
+				  <label></label>
+				</div>
+				</li>
+			  <li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p style="position:absolute;left:30px;top:5px;">Mutual friends<a class="featurePreview" modal="mutual_friends" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+				<div id="mutualFriends" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+				  <input type="checkbox" checked="">
+				  <label></label>
+				</div>
+				</li>
+			  <li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+			  <p style="position:absolute;left:30px;top:5px;">RoPro Reputation on profiles<a class="featurePreview" modal="ropro_reputation" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+			  <div id="reputation" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+				<input type="checkbox" checked="">
+				<label></label>
+			  </div>
+			  </li>
+			  <li class="restricted" style="display:none;position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p style="position:absolute;left:30px;top:5px;">Featured Toys (13+ users only)</p>
+				<div id="featuredToys" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+					<input type="checkbox" checked="">
+					<label></label>
+				</div>
+			  </li>
+			  <!--<li class="restricted" style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p style="position:absolute;left:30px;top:5px;">Active server count on experience page</p>
+				<div id="activeServerCount" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+				  <input type="checkbox" checked="">
+				  <label></label>
+				</div>
+				</li>-->
+				<li class="restricted" style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Show your RoPro badge on your profile</p>
+					<div id="roproBadge" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+					</li>
+			  <li class="restricted" style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p style="position:absolute;left:30px;top:5px;">Show RoPro icon on Roblox navbar</p>
+				<div id="roproIcon" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+				  <input type="checkbox" checked="">
+				  <label></label>
+				</div>
+				</li>
+				<li style="display:none;position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">RoPro Voice Servers (Voice chat users only)<a class="featurePreview" modal="ropro_voice_servers" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="roproVoiceServers" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+					</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;display:none;">
+					<p style="position:absolute;left:30px;top:5px;">RoPro Cloud Play<a class="featurePreview" modal="ropro_cloud_play" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="cloudPlay" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+					</li>
+				<li style="display:none;position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">RoPro Wishlist<a class="featurePreview" modal="ropro_wishlist" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="roproWishlist" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+					</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Hide Private Servers<a class="featurePreview" modal="hide_private_servers" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="hidePrivateServers" style="position:absolute;right:30px;top:5px;" value = 1 class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+			  	<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p class="tradingFeatures" style="font-size:18px;font-family:RalewayBold;position:absolute;left:30px;top:5px;border-bottom: 1px solid white;">Trading Features</p>
+					</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Trade age on sidebar<a class="featurePreview" modal="trade_age" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="tradeAge" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+					<label></label>
+				</div>
+			</li>
+			<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p style="position:absolute;left:30px;top:5px;">Quick Decline<a class="featurePreview" modal="quick_decline" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+				<div id="quickDecline" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+					<input type="checkbox" checked="">
+					<label></label>
+				</div>
+			</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Quick Cancel<a class="featurePreview" modal="quick_cancel" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="quickCancel" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Projected warnings on item page<a class="featurePreview" modal="projected_item" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="projectedWarningItemPage" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+			<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;display:none;">
+				<p style="position:absolute;left:30px;top:5px;">Quick trade button for resellers<a class="featurePreview" modal="quick_trade" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+				<div id="quickTradeResellers" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+					<input type="checkbox" checked="">
+					<label></label>
+				</div>
+			</li>
+			<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p style="position:absolute;left:30px;top:5px;">Hide serials toggle on trade page (for screenshots)<a class="featurePreview" modal="hide_serials" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+				<div id="hideSerials" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+					<input type="checkbox" checked="">
+					<label></label>
+				</div>
+			</li>
+			<li style="display:none;position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p class="groupFeatures" style="font-size:18px;font-family:RalewayBold;position:absolute;left:30px;top:5px;border-bottom: 1px solid white;">Group Features</p>
+				</li>
+			<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;display:none;">
+				<p style="position:absolute;left:30px;top:5px;">Integrated group rank on group wall<a class="featurePreview" modal="group_rank" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+				<div id="groupRank" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+					<input type="checkbox" checked="">
+					<label></label>
+				</div>
+			</li>
+			<li class="restricted" style="display:none;position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+				<p style="position:absolute;left:30px;top:5px;">Group Discord server integration (13+ users only)<a class="featurePreview" modal="group_discord" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+				<div id="groupDiscord" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+					<input type="checkbox" checked="">
+					<label></label>
+				</div>
+			</li>
+			</ul>
+		</div>
+	</div>
+	<div class="ui top tab segment tabcontent" data-tab="second">
+		<div class="ui centered grid">
+			<ul style="list-style:none;">
+				<li style="display:none;" id="standardTierUpgrade"><a href="https://ropro.io#plus" target="_blank"><button class="ui primary button"><img style="width:20px;filter: drop-shadow(1px 1px 1px #363636);margin:-3.5px;margin-right:5px;" src="./images/plus_icon.png">
+					<b>Upgrade Ropro</b>
+  				</button></a></li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p class="generalFeatures" style="font-size:18px;font-family:RalewayBold;position:absolute;left:30px;top:5px;border-bottom: 1px solid white;">General Features</p>
+					</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Show server ping details<a class="featurePreview" modal="additional_server_info" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="additionalServerInfo" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Best connection server filter<a class="featurePreview" modal="more_server_filters" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="moreServerFilters" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Customize the color of your RoPro Theme<a class="featurePreview" modal="theme_color_adjustments" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="themeColorAdjustments" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;display:none;">
+					<p style="position:absolute;left:30px;top:5px;">More experience filters<a class="featurePreview" modal="more_filters" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="moreGameFilters" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;display:none;">
+					<p style="position:absolute;left:30px;top:5px;">Experience like/dislike ratio filter<a class="featurePreview" modal="like_filter" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="gameLikeRatioFilter" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Live experience like and dislike counters<a class="featurePreview" modal="live_like_counter" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="liveLikeDislikeFavoriteCounters" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Save Avatar Sandbox outfits<a class="featurePreview" modal="sandbox_outfits" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="sandboxOutfits" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;display:none;">
+					<p style="position:absolute;left:30px;top:5px;">Animated profile themes<a class="featurePreview" modal="animated_profile_themes" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="animatedProfileThemes" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="display:none;position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">More playtime sorts<a class="featurePreview" modal="more_playtime_sorts" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="morePlaytimeSorts" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">More mutuals on friends page<a class="featurePreview" modal="more_mutuals" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="moreMutuals" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="display:none;position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">More Voice Servers (Voice chat users only)<a class="featurePreview" modal="ropro_voice_servers" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="premiumVoiceServers" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+					<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+						<p class="tradingFeatures" style="font-size:18px;font-family:RalewayBold;position:absolute;left:30px;top:5px;border-bottom: 1px solid white;">Trading Features</p>
+						</li>
+					<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+						<p style="position:absolute;left:30px;top:5px;">RoPro Trade Panel<a class="featurePreview" modal="trade_panel" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+						<div id="tradePanel" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+							<input type="checkbox" checked="">
+							<label></label>
+						</div>
+					</li>
+					<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+						<p style="position:absolute;left:30px;top:5px;">Item Info Card (trade graphs/details)<a class="featurePreview" modal="item_info_card" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+						<div id="itemInfoCard" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+							<input type="checkbox" checked="">
+							<label></label>
+						</div>
+					</li>
+					<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+						<p style="position:absolute;left:30px;top:5px;">Trade value calculator<a class="featurePreview" modal="trade_calculator" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+						<div id="tradeValueCalculator" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+							<input type="checkbox" checked="">
+							<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Trade demand rating calculator<a class="featurePreview" modal="trade_calculator" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="tradeDemandRatingCalculator" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Individual item values in trades<a class="featurePreview" modal="trade_value_demand" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="tradeItemValue" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Individual item demands in trades<a class="featurePreview" modal="trade_value_demand" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="tradeItemDemand" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Trade search<a class="featurePreview" modal="trade_search" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="tradeSearch" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+					<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+						<p style="position:absolute;left:30px;top:5px;">Display value difference in the center of trades</p>
+						<div id="winLossDisplay" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+							<input type="checkbox" checked="">
+							<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Display Item Under/Over RAP Requirement</p>
+					<div id="underOverRAP" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Values & demands on item page<a class="featurePreview" modal="item_value_demand" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="itemPageValueDemand" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Projected warnings on trade page<a class="featurePreview" modal="projected_trade" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="tradePageProjectedWarning" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Embedded links to Rolimons item pages<a class="featurePreview" modal="embedded_roli_item" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="embeddedRolimonsItemLink" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Embedded links to Rolimons user pages<a class="featurePreview" modal="embedded_roli_user" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="embeddedRolimonsUserLink" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Trade Board page<a class="featurePreview" modal="trade_offers" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="tradeOffersPage" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				</ul>
+			</div>
+		</div>
+	<div class="ui top tab segment tabcontent" data-tab="third">
+		<div class="ui centered grid">
+			<ul style="list-style:none;">
+				<li style="display:none;" id="proTierUpgrade"><a href="https://ropro.io#rex" target="_blank"><button class="ui primary button"><img style="width:20px;filter: drop-shadow(1px 1px 1px #363636);margin:-3.5px;margin-right:5px;" src="./images/rex_icon.png">
+					<b>Upgrade RoPro</b>
+  				</button></a></li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p class="generalFeatures" style="font-size:18px;font-family:RalewayBold;position:absolute;left:30px;top:5px;border-bottom: 1px solid white;">General Features</p>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Live experience visits counter<a class="featurePreview" modal="live_playing_visit_count" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="liveVisits" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Live experience players counter<a class="featurePreview" modal="live_playing_visit_count" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="livePlayers" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">View account value on profiles<a class="featurePreview" modal="profile_value" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="profileValue" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p class="tradingFeatures" style="font-size:18px;font-family:RalewayBold;position:absolute;left:30px;top:5px;border-bottom: 1px solid white;">Trading Features</p>
+				</li>
+						<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+							<p style="position:absolute;left:30px;top:5px;">Advanced trade search<a class="featurePreview" modal="advanced_trade_search" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+							<div id="advancedTradeSearch" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+								<input type="checkbox" checked="">
+								<label></label>
+							</div>
+						</li>
+						<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+							<p style="position:absolute;left:30px;top:5px;">More Trade Panel buttons<a class="featurePreview" modal="more_trade_panel" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+							<div id="moreTradePanel" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+								<input type="checkbox" checked="">
+								<label></label>
+							</div>
+						</li>
+						<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+							<p style="position:absolute;left:30px;top:5px;">Trade Board posting<a class="featurePreview" modal="trade_offers_rex" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+							<div id="tradeOffersPost" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+								<input type="checkbox" checked="">
+							<label></label>
+						</div>
+					</li>
+						<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+							<p style="position:absolute;left:30px;top:5px;">Trade Board More Options<a class="featurePreview" modal="trade_board_more_options" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+							<div id="tradeOffersWishlist" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+								<input type="checkbox" checked="">
+								<label></label>
+							</div>
+						</li>
+						<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+							<p style="position:absolute;left:30px;top:5px;">Trade Board page integrated value calculations<a class="featurePreview" modal="ropro_trade_offers_value" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+							<div id="tradeOffersValueCalculator" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+								<input type="checkbox" checked="">
+								<label></label>
+							</div>
+						</li>
+						<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+							<p style="position:absolute;left:30px;top:5px;">Trade value win/loss preview<a class="featurePreview" modal="trade_preview" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+							<div id="tradePreviews" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+							<input type="checkbox" checked="">
+							<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Quick item search<a class="featurePreview" modal="quick_item_search" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="quickItemSearch" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Trade Notifier<a class="tradeNotifierSetupGuideButton" title="Notification setup guide">Note</a><a class="featurePreview" modal="trade_notifier" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="tradeNotifier" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+					<li style="display:none;position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+						<p style="position:absolute;left:30px;top:5px;">Hide trade notifications from trade botters</p>
+						<div id="hideTradeBots" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+							<input type="checkbox" checked="">
+							<label></label>
+						</div>
+					</li>
+					<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+						<p style="position:absolute;left:30px;top:5px;">Suspected bot badges in trade lists<a class="suspectedBotBadgesPreviewButton" style="position:absolute;width:20px;right:-25px;top:2px;cursor:pointer;"><img style="width:20px;cursor:pointer;" src="./images/info.png"></img></a></p>
+						<div id="suspectedBotBadges" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+							<input type="checkbox" checked="">
+							<label></label>
+						</div>
+					</li>
+					<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+						<p style="position:absolute;left:30px;top:5px;">Hide declined trade notifications</p>
+						<div id="hideDeclinedNotifications" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+							<input type="checkbox" checked="">
+							<label></label>
+					</div>
+				</li>
+				<li style="display:none;position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Hide outbound trade notifications</p>
+					<div id="hideOutboundNotifications" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="display:none;position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Auto-decline trade bots</p>
+					<div id="autoDeclineTradeBots" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Auto-decline bad trades<a class="featurePreview" modal="autodecline" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="autoDecline" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Auto-decline loss threshold</p>
+					<select id="declineThreshold" style="font-size:12px;position:absolute;right:30px;top:0px;width:100px;height:33px;" class="ui selection dropdown">
+						<option value=50 selected>50% loss</option>
+						<option value=40>40% loss</option>
+						<option value=30>30% loss</option>
+						<option value=20>20% loss</option>
+						<option value=10>10% loss</option>
+						<option value=0>Equal trades</option>
+					</select>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p class="accountSecurityFeatures" style="font-size:18px;font-family:RalewayBold;position:absolute;left:30px;top:5px;border-bottom: 1px solid white;">Account Security Features</p>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Outbound trade protection<a class="featurePreview" modal="outbound_protection" style="position:absolute;width:20px;right:-25px;top:2px;"><img style="width:20px;" src="./images/info.png"></img></a></p>
+					<div id="tradeProtection" style="position:absolute;right:30px;top:5px;" class="ui fitted toggle checked checkbox">
+						<input type="checkbox" checked="">
+						<label></label>
+					</div>
+				</li>
+				<li style="position:relative;height:30px;width:500px;margin-top:10px;margin-bottom:10px;">
+					<p style="position:absolute;left:30px;top:5px;">Outbound trade cancel threshold</p>
+					<select id="cancelThreshold" style="font-size:12px;position:absolute;right:30px;top:0px;width:100px;height:33px;" class="ui selection dropdown">
+						<option value=50 selected>50% loss</option>
+						<option value=40>40% loss</option>
+						<option value=30>30% loss</option>
+						<option value=20>20% loss</option>
+						<option value=10>10% loss</option>
+						<option value=0>Equal trades</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+	</div>
+		</div>
+  </body>
+	  <script src="./js/page/options.js"></script>
+	  <footer style="margin-top:20px;width:100%;">
+		<div class="ui divider"></div>
+	<p style="text-align:center;"><a href="https://ropro.io" target="_blank"><img src="./images/ropro_logo.png" style="width:75px;margin-bottom:-13px;margin-right:10px;"></a> | <a style="color:white;margin-left:10px;margin-right:10px;" id="termsOfService" target="_blank" href="https://ropro.io/terms">Terms of Service</a> | <a style="color:white;margin-left:10px;margin-right:10px;" target="_blank" id="privacyPolicy" href="https://ropro.io/privacy-policy">Privacy Policy</a> | <a style="color:white;margin-left:10px;margin-right:10px;" id="help" target="_blank" href="https://ropro.io/support">Help</a> | <a style="color:white;margin-left:10px;margin-right:10px;" target="_blank" id="subscription" href="https://ropro.io/subscription">Subscription</a></p>
+	<p style="text-align:center;">
+	<span id="disclaimer1">RoPro is not affiliated with the Roblox Corporation.</span>
+	<br>
+	<span id="disclaimer2">RoPro is developed by <a href="https://www.roblox.com/users/2439010264/profile">@Dice_RoPro</a>. Contact me: dice@ropro.io!</span>
+	<br>
+	<span id="disclaimer3">Because Roblox frequently updates its platform, RoPro feature availability may change over time.</span>
+	<br>
+	<br>
+	Copyright &copy; 2026 RoPro Software Corporation
+	<br>
+	<br>
+	</p>
+  </footer>
+</html>

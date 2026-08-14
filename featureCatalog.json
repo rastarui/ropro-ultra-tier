@@ -1,0 +1,839 @@
+{
+  "schemaVersion": 1,
+  "sourceOfTruth": "chrome_extension/background.js:defaultSettings",
+  "notes": [
+    "This file is the canonical list of extension feature/settings keys.",
+    "Update this file when adding/removing settings or changing options wiring.",
+    "The parity test enforces alignment with background defaults and options UI wiring."
+  ],
+  "settings": [
+    {
+      "key": "activeServerCount",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "activeServerCount"
+      }
+    },
+    {
+      "key": "additionalServerInfo",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "additionalServerInfo"
+      }
+    },
+    {
+      "key": "advancedTradeSearch",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "advancedTradeSearch"
+      }
+    },
+    {
+      "key": "allExperiences",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "allExperiences"
+      }
+    },
+    {
+      "key": "animatedProfileThemes",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "animatedProfileThemes"
+      }
+    },
+    {
+      "key": "autoDecline",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "autoDecline"
+      }
+    },
+    {
+      "key": "autoDeclineTradeBots",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "autoDeclineTradeBots"
+      }
+    },
+    {
+      "key": "avatarEditorChanges",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "avatarEditorChanges"
+      }
+    },
+    {
+      "key": "cancelThreshold",
+      "defaultValue": 50,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "number_input",
+        "elementId": "cancelThreshold"
+      }
+    },
+    {
+      "key": "cloudPlay",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "cloudPlay"
+      }
+    },
+    {
+      "key": "cloudPlayActive",
+      "defaultValue": false,
+      "options": {
+        "includedInSettingsPayload": false,
+        "controlType": "background_only",
+        "elementId": null
+      }
+    },
+    {
+      "key": "declineThreshold",
+      "defaultValue": 50,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "number_input",
+        "elementId": "declineThreshold"
+      }
+    },
+    {
+      "key": "embeddedRolimonsItemLink",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "embeddedRolimonsItemLink"
+      }
+    },
+    {
+      "key": "embeddedRolimonsUserLink",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "embeddedRolimonsUserLink"
+      }
+    },
+    {
+      "key": "experienceQuickPlay",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "experienceQuickPlay"
+      }
+    },
+    {
+      "key": "experienceQuickSearch",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "experienceQuickSearch"
+      }
+    },
+    {
+      "key": "fastestServersSort",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": false,
+        "controlType": "background_only",
+        "elementId": null
+      }
+    },
+    {
+      "key": "featuredToys",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "featuredToys"
+      }
+    },
+    {
+      "key": "gameLikeRatioFilter",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "gameLikeRatioFilter"
+      }
+    },
+    {
+      "key": "genreFilters",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "genreFilters"
+      }
+    },
+    {
+      "key": "globalThemes",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "themes_page_managed",
+        "elementId": null
+      }
+    },
+    {
+      "key": "groupDiscord",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "groupDiscord"
+      }
+    },
+    {
+      "key": "groupRank",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "groupRank"
+      }
+    },
+    {
+      "key": "hideDeclinedNotifications",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "hideDeclinedNotifications"
+      }
+    },
+    {
+      "key": "hideOutboundNotifications",
+      "defaultValue": false,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "hideOutboundNotifications"
+      }
+    },
+    {
+      "key": "hidePrivateServers",
+      "defaultValue": false,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "hidePrivateServers"
+      }
+    },
+    {
+      "key": "hideSerials",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "hideSerials"
+      }
+    },
+    {
+      "key": "hideTradeBots",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "hideTradeBots"
+      }
+    },
+    {
+      "key": "itemInfoCard",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "itemInfoCard"
+      }
+    },
+    {
+      "key": "itemPageValueDemand",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "itemPageValueDemand"
+      }
+    },
+    {
+      "key": "lastOnlinePrivacy",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "lastOnlinePrivacy"
+      }
+    },
+    {
+      "key": "lastOnlineTimezone",
+      "defaultValue": "local",
+      "options": {
+        "includedInSettingsPayload": false,
+        "controlType": "background_only",
+        "elementId": null
+      }
+    },
+    {
+      "key": "linkedDiscord",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "linkedDiscord"
+      }
+    },
+    {
+      "key": "liveLikeDislikeFavoriteCounters",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "liveLikeDislikeFavoriteCounters"
+      }
+    },
+    {
+      "key": "livePlayers",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "livePlayers"
+      }
+    },
+    {
+      "key": "liveVisits",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "liveVisits"
+      }
+    },
+    {
+      "key": "moreGameFilters",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "moreGameFilters"
+      }
+    },
+    {
+      "key": "moreMutuals",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "moreMutuals"
+      }
+    },
+    {
+      "key": "morePlaytimeSorts",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "morePlaytimeSorts"
+      }
+    },
+    {
+      "key": "moreServerFilters",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "moreServerFilters"
+      }
+    },
+    {
+      "key": "moreTradePanel",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "moreTradePanel"
+      }
+    },
+    {
+      "key": "mostPlayedGames",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "mostPlayedGames"
+      }
+    },
+    {
+      "key": "mostRecentServer",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "mostRecentServer"
+      }
+    },
+    {
+      "key": "mutualFriends",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "mutualFriends"
+      }
+    },
+    {
+      "key": "playtimeTracking",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "playtimeTracking"
+      }
+    },
+    {
+      "key": "popularToday",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "popularToday"
+      }
+    },
+    {
+      "key": "premiumVoiceServers",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "premiumVoiceServers"
+      }
+    },
+    {
+      "key": "profileThemes",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "themes_page_managed",
+        "elementId": null
+      }
+    },
+    {
+      "key": "profileThemeVisible",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "themes_page_managed",
+        "elementId": null
+      }
+    },
+    {
+      "key": "profileValue",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "profileValue"
+      }
+    },
+    {
+      "key": "projectedWarningItemPage",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "projectedWarningItemPage"
+      }
+    },
+    {
+      "key": "quickCancel",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "quickCancel"
+      }
+    },
+    {
+      "key": "quickDecline",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "quickDecline"
+      }
+    },
+    {
+      "key": "quickEquipItem",
+      "defaultValue": false,
+      "options": {
+        "includedInSettingsPayload": false,
+        "controlType": "background_only",
+        "elementId": null
+      }
+    },
+    {
+      "key": "quickItemSearch",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "quickItemSearch"
+      }
+    },
+    {
+      "key": "quickTradeResellers",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "quickTradeResellers"
+      }
+    },
+    {
+      "key": "quickUserSearch",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": false,
+        "controlType": "background_only",
+        "elementId": null
+      }
+    },
+    {
+      "key": "randomGame",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "randomGame"
+      }
+    },
+    {
+      "key": "randomServer",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "randomServer"
+      }
+    },
+    {
+      "key": "reputation",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "reputation"
+      }
+    },
+    {
+      "key": "reputationVote",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": false,
+        "controlType": "background_only",
+        "elementId": null
+      }
+    },
+    {
+      "key": "roproBadge",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "roproBadge"
+      }
+    },
+    {
+      "key": "roproEggCollection",
+      "defaultValue": false,
+      "options": {
+        "includedInSettingsPayload": false,
+        "controlType": "background_only",
+        "elementId": null
+      }
+    },
+    {
+      "key": "roproIcon",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "roproIcon"
+      }
+    },
+    {
+      "key": "roproShuffle",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "roproShuffle"
+      }
+    },
+    {
+      "key": "roproVoiceServers",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "roproVoiceServers"
+      }
+    },
+    {
+      "key": "roproWishlist",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "roproWishlist"
+      }
+    },
+    {
+      "key": "sandbox",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "sandbox"
+      }
+    },
+    {
+      "key": "sandboxOutfits",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "sandboxOutfits"
+      }
+    },
+    {
+      "key": "serverFilters",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "serverFilters"
+      }
+    },
+    {
+      "key": "serverInviteLinks",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "serverInviteLinks"
+      }
+    },
+    {
+      "key": "serverSizeSort",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": false,
+        "controlType": "background_only",
+        "elementId": null
+      }
+    },
+    {
+      "key": "singleSessionMode",
+      "defaultValue": false,
+      "options": {
+        "includedInSettingsPayload": false,
+        "controlType": "background_only",
+        "elementId": null
+      }
+    },
+    {
+      "key": "suspectedBotBadges",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "suspectedBotBadges"
+      }
+    },
+    {
+      "key": "themeColorAdjustments",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "themeColorAdjustments"
+      }
+    },
+    {
+      "key": "tradeAge",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeAge"
+      }
+    },
+    {
+      "key": "tradeDemandRatingCalculator",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeDemandRatingCalculator"
+      }
+    },
+    {
+      "key": "tradeItemDemand",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeItemDemand"
+      }
+    },
+    {
+      "key": "tradeItemValue",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeItemValue"
+      }
+    },
+    {
+      "key": "tradeNotifier",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeNotifier"
+      }
+    },
+    {
+      "key": "tradeOffersPage",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeOffersPage"
+      }
+    },
+    {
+      "key": "tradeOffersPost",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeOffersPost"
+      }
+    },
+    {
+      "key": "tradeOffersValueCalculator",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeOffersValueCalculator"
+      }
+    },
+    {
+      "key": "tradeOffersWishlist",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeOffersWishlist"
+      }
+    },
+    {
+      "key": "tradePageProjectedWarning",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradePageProjectedWarning"
+      }
+    },
+    {
+      "key": "tradePanel",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradePanel"
+      }
+    },
+    {
+      "key": "tradePreviews",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradePreviews"
+      }
+    },
+    {
+      "key": "tradeProtection",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeProtection"
+      }
+    },
+    {
+      "key": "tradeSearch",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeSearch"
+      }
+    },
+    {
+      "key": "tradeValueCalculator",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "tradeValueCalculator"
+      }
+    },
+    {
+      "key": "underOverRAP",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "underOverRAP"
+      }
+    },
+    {
+      "key": "winLossDisplay",
+      "defaultValue": true,
+      "options": {
+        "includedInSettingsPayload": true,
+        "controlType": "toggle",
+        "elementId": "winLossDisplay"
+      }
+    }
+  ]
+}

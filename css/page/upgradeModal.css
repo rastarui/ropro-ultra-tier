@@ -1,0 +1,270 @@
+.ropro-upgrade-modal {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	min-height: 100vh;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: rgba(5,10,18,0.7);
+	backdrop-filter: blur(3px);
+	padding: 24px;
+	box-sizing: border-box;
+}
+
+.ropro-upgrade-modal .ropro-upgrade-card {
+	background: linear-gradient(145deg, #111827 0%, #1b2434 55%, #111827 100%);
+	border: 1px solid rgba(132, 146, 179, 0.36);
+	border-radius: 16px;
+	box-shadow: 0 20px 48px rgba(0,0,0,0.48);
+	width: min(880px, 92vw);
+	max-height: 86vh;
+	overflow: auto;
+	margin: 0 auto;
+	padding: 26px 28px 24px;
+	color: #f4f8ff;
+	font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+	position: relative;
+	animation: roproUpgradeIn 180ms ease-out;
+}
+
+.ropro-upgrade-layout {
+	display: grid;
+	grid-template-columns: minmax(220px, 270px) 1fr;
+	gap: 24px;
+	align-items: center;
+}
+
+.ropro-upgrade-hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+}
+
+.ropro-upgrade-logo {
+	width: 88px;
+	height: 88px;
+	object-fit: contain;
+	filter: drop-shadow(0 8px 12px rgba(5, 8, 14, 0.55));
+}
+
+.ropro-upgrade-video {
+	width: 100%;
+	max-width: 250px;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: 14px;
+	border: 1px solid rgba(116, 183, 255, 0.32);
+	background: radial-gradient(circle at 40% 15%, rgba(22, 115, 203, 0.35), rgba(5, 10, 18, 0.9));
+	box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+}
+
+.ropro-upgrade-title {
+	margin: 0 0 12px;
+	padding: 0 0 10px;
+	font-size: 38px;
+	font-weight: 800;
+	letter-spacing: 0.2px;
+	line-height: 1.08;
+	border-bottom: 2px solid rgba(136, 199, 255, 0.42);
+}
+
+.ropro-upgrade-subtitle {
+	margin: 0 0 12px;
+	font-size: 25px;
+	line-height: 1.28;
+	font-weight: 500;
+	color: #f1f6ff !important;
+}
+
+.light-theme .ropro-upgrade-modal .ropro-upgrade-card .ropro-upgrade-subtitle {
+	color: #f8fbff !important;
+}
+
+.ropro-upgrade-subtitle .ropro-upgrade-tier {
+	margin: 0 4px 0 2px;
+	color: #ffffff !important;
+}
+
+.ropro-upgrade-context {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 4px 10px;
+	border-radius: 999px;
+	background-color: rgba(42, 59, 91, 0.55);
+	border: 1px solid rgba(129, 172, 235, 0.45);
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.2px;
+	text-transform: uppercase;
+	color: #cfe5ff;
+	margin-bottom: 8px;
+}
+
+.ropro-upgrade-context-icon {
+	width: 16px;
+	height: 16px;
+	object-fit: contain;
+}
+
+.ropro-upgrade-tag-row {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 0 0 8px;
+}
+
+.ropro-upgrade-tag-row .ropro-upgrade-context {
+	margin: 0;
+}
+
+.ropro-upgrade-tier {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-weight: 800;
+	color: #ffffff;
+	white-space: nowrap;
+}
+
+.ropro-upgrade-tier img {
+	width: 22px;
+	height: 22px;
+	object-fit: contain;
+}
+
+.ropro-upgrade-benefits h3 {
+	margin: 2px 0 8px;
+	font-size: 30px;
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: rgba(155, 207, 255, 0.6);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 4px;
+}
+
+.ropro-upgrade-benefits ul {
+	margin: 0 0 16px;
+	padding-left: 22px;
+	font-size: 16px;
+	line-height: 1.55;
+	color: #d7e2f3;
+}
+
+.ropro-upgrade-benefits li {
+	margin-bottom: 4px;
+}
+
+.ropro-upgrade-benefits .ropro-upgrade-footer-note {
+	margin-top: 8px;
+	list-style-type: none;
+	margin-left: -10px;
+	font-weight: 700;
+	color: #dce8f7;
+}
+
+.ropro-upgrade-benefits a {
+	color: #9dd8ff;
+	text-decoration: underline;
+}
+
+.ropro-upgrade-cta-link {
+	display: block;
+	text-decoration: none;
+}
+
+.ropro-upgrade-cta-button {
+	width: 100%;
+	height: 50px;
+	border: none;
+	border-radius: 11px;
+	background: linear-gradient(90deg, #1d76d9 0%, #355ee8 100%);
+	color: #ffffff;
+	font-size: 26px;
+	font-weight: 700;
+	letter-spacing: 0.2px;
+	box-shadow: 0 10px 24px rgba(9, 53, 150, 0.46);
+	transition: transform 120ms ease, filter 120ms ease;
+}
+
+.ropro-upgrade-cta-button:hover {
+	filter: brightness(1.08);
+	transform: translateY(-1px);
+}
+
+.ropro-upgrade-close {
+	color: rgba(236, 243, 255, 0.84);
+	background: transparent;
+	border: none;
+	font-size: 44px;
+	line-height: 1;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+
+.ropro-upgrade-close:hover,
+.ropro-upgrade-close:focus {
+	color: #ffffff;
+	text-shadow: 0 0 8px rgba(173, 221, 255, 0.7);
+}
+
+@keyframes roproUpgradeIn {
+	from {
+		transform: translateY(-10px) scale(0.985);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+}
+
+@media (max-width: 900px) {
+	.ropro-upgrade-modal {
+		padding: 10px;
+	}
+
+	.ropro-upgrade-modal .ropro-upgrade-card {
+		width: 95vw;
+		padding: 16px 14px 14px;
+		max-height: 92vh;
+	}
+
+	.ropro-upgrade-layout {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.ropro-upgrade-video {
+		max-width: 220px;
+	}
+
+	.ropro-upgrade-title {
+		font-size: 30px;
+		padding-right: 44px;
+	}
+
+	.ropro-upgrade-subtitle {
+		font-size: 22px;
+	}
+
+	.ropro-upgrade-benefits h3 {
+		font-size: 27px;
+	}
+
+	.ropro-upgrade-cta-button {
+		font-size: 24px;
+	}
+}

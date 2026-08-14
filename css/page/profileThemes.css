@@ -1,0 +1,228 @@
+.profile-selector-box .rbx-upgrade-now {
+		display:block!important;
+}
+
+.profile-selector-box .animated-themes-outer {
+	display:block!important;
+	border-radius:15px;
+	filter:brightness(0.3);
+}
+
+.profile-selector-box .import-decal-outer {
+	display:block!important;
+	border-radius:15px;
+	filter:brightness(0.3);
+}
+
+.profile-selector-box #animatedThemeCardBox {
+	filter:blur(3px);
+	pointer-events:none;
+}
+
+.profile-selector-box #customThemeBox {
+	filter:blur(4px);
+	pointer-events:none;
+}
+
+.profile-selector-box #yourImportedDecals {
+	display:none;
+}
+
+.dark-theme .profile-selector-box .animated-themes-outer {
+	background-color:#232527;
+}
+
+.dark-theme .profile-selector-box .import-decal-outer {
+	background-color:#232527;
+}
+
+.ropro-toggle.btn-toggle.on {
+	background-color:#0084dd!important;
+}
+
+.ropro-theme-element {
+	transform:
+	  perspective(800px)
+	  rotateY(25deg) scale(0.9)
+	  rotateX(10deg);
+	opacity: 1;
+	transition: 0.4s ease all;
+}
+.ropro-theme-element:hover {
+	transform:
+	  perspective(800px)
+	  rotateY(-15deg)
+	  translateY(-10px)
+	  rotateX(10deg)
+	  scale(1);
+	filter: blur(0);
+	opacity: 1;
+}
+
+.light-theme .ropro-theme-arrow {
+	filter: invert(0.5);
+	cursor: pointer;
+}
+
+.dark-theme .ropro-theme-arrow {
+	filter: invert(0.5);
+	cursor: pointer;
+}
+
+.light-theme .ropro-theme-arrow:hover {
+	filter: invert(1);
+}
+
+.dark-theme .ropro-theme-arrow:hover {
+	filter: invert(0);
+}
+
+#profileThemeCardBox {
+	transition: left 0.25s;
+}
+
+#foregroundOpacitySlider input[type=range]::-webkit-slider-thumb{
+	-webkit-appearance: none!important;
+	background:initial!important;
+	background-image: url(chrome-extension://__MSG_@@extension_id__/images/selector_icon.png)!important;
+	background-size: contain!important;
+	border: 0px!important;
+	transform:scale(0.9)!important;
+	margin-left:5px;
+}
+
+body.ropro-profile-theme-active .profile-avatar-left.profile-avatar-gradient,
+body.ropro-profile-theme-loading .profile-avatar-left.profile-avatar-gradient {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	filter: none !important;
+	backdrop-filter: none !important;
+}
+
+body.ropro-profile-theme-active .profile-avatar-left.profile-avatar-gradient .cover-gradient-overlay,
+body.ropro-profile-theme-active .profile-avatar-left.profile-avatar-gradient .cover-blur-overlay,
+body.ropro-profile-theme-loading .profile-avatar-left.profile-avatar-gradient .cover-gradient-overlay,
+body.ropro-profile-theme-loading .profile-avatar-left.profile-avatar-gradient .cover-blur-overlay,
+body.ropro-profile-theme-active #container-main > div:first-child > .relative,
+body.ropro-profile-theme-loading #container-main > div:first-child > .relative,
+body.ropro-profile-theme-active .profile-header-overlay,
+body.ropro-profile-theme-loading .profile-header-overlay,
+body.ropro-profile-theme-active #user-profile-header-bg,
+body.ropro-profile-theme-loading #user-profile-header-bg,
+body.ropro-profile-theme-active .user-profile-header,
+body.ropro-profile-theme-loading .user-profile-header,
+body.ropro-profile-theme-active .profile-header-overlay::before,
+body.ropro-profile-theme-loading .profile-header-overlay::before,
+body.ropro-profile-theme-active .profile-header-overlay::after,
+body.ropro-profile-theme-loading .profile-header-overlay::after,
+body.ropro-profile-theme-active #user-profile-header-bg::before,
+body.ropro-profile-theme-loading #user-profile-header-bg::before,
+body.ropro-profile-theme-active #user-profile-header-bg::after,
+body.ropro-profile-theme-loading #user-profile-header-bg::after,
+body.ropro-profile-theme-active .user-profile-header::before,
+body.ropro-profile-theme-loading .user-profile-header::before,
+body.ropro-profile-theme-active .user-profile-header::after,
+body.ropro-profile-theme-loading .user-profile-header::after {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	border-color: transparent !important;
+	filter: none !important;
+	backdrop-filter: none !important;
+}
+
+body.ropro-profile-theme-active .profile-avatar-left.profile-avatar-gradient,
+body.ropro-profile-theme-active .profile-avatar-left.profile-avatar-gradient .cover-gradient-overlay,
+body.ropro-profile-theme-active .profile-avatar-left.profile-avatar-gradient .cover-blur-overlay,
+body.ropro-profile-theme-loading .profile-avatar-left.profile-avatar-gradient,
+body.ropro-profile-theme-loading .profile-avatar-left.profile-avatar-gradient .cover-gradient-overlay,
+body.ropro-profile-theme-loading .profile-avatar-left.profile-avatar-gradient .cover-blur-overlay {
+	opacity: 0 !important;
+	pointer-events: none !important;
+}
+
+body.ropro-profile-theme-active .thumbnail-holder.thumbnail-holder-position,
+body.ropro-profile-theme-loading .thumbnail-holder.thumbnail-holder-position,
+body.ropro-profile-theme-active .thumbnail-holder.thumbnail-holder-position::before,
+body.ropro-profile-theme-loading .thumbnail-holder.thumbnail-holder-position::before,
+body.ropro-profile-theme-active .thumbnail-holder.thumbnail-holder-position::after,
+body.ropro-profile-theme-loading .thumbnail-holder.thumbnail-holder-position::after,
+body.ropro-profile-theme-active .thumbnail-holder.thumbnail-holder-position .avatar-thumbnail-container,
+body.ropro-profile-theme-loading .thumbnail-holder.thumbnail-holder-position .avatar-thumbnail-container,
+body.ropro-profile-theme-active .thumbnail-holder.thumbnail-holder-position .avatar-thumbnail-container::before,
+body.ropro-profile-theme-loading .thumbnail-holder.thumbnail-holder-position .avatar-thumbnail-container::before,
+body.ropro-profile-theme-active .thumbnail-holder.thumbnail-holder-position .avatar-thumbnail-container::after,
+body.ropro-profile-theme-loading .thumbnail-holder.thumbnail-holder-position .avatar-thumbnail-container::after,
+body.ropro-profile-theme-active .thumbnail-holder.thumbnail-holder-position .thumbnail-2d-container.no-background-thumbnail.thumbnail-span,
+body.ropro-profile-theme-loading .thumbnail-holder.thumbnail-holder-position .thumbnail-2d-container.no-background-thumbnail.thumbnail-span,
+body.ropro-profile-theme-active .thumbnail-holder.thumbnail-holder-position .thumbnail-2d-container.no-background-thumbnail.thumbnail-span img,
+body.ropro-profile-theme-loading .thumbnail-holder.thumbnail-holder-position .thumbnail-2d-container.no-background-thumbnail.thumbnail-span img {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	filter: none !important;
+	backdrop-filter: none !important;
+}
+
+body.ropro-profile-theme-active .thumbnail-holder.thumbnail-holder-position .thumbnail-2d-container.no-background-thumbnail.thumbnail-span img,
+body.ropro-profile-theme-loading .thumbnail-holder.thumbnail-holder-position .thumbnail-2d-container.no-background-thumbnail.thumbnail-span img {
+	filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.56)) drop-shadow(0 0 7px rgba(255, 255, 255, 0.2));
+}
+
+body.ropro-profile-theme-active #container-main > div:first-child {
+	padding: 26px 26px 34px !important;
+	box-sizing: border-box;
+}
+
+body.ropro-profile-theme-active #content:has(.profile-container) {
+	max-width: 1030px !important;
+}
+
+body.ropro-profile-theme-active .user-profile-header,
+body.ropro-profile-theme-active .profile-tabs,
+body.ropro-profile-theme-active .profile-tab-content,
+body.ropro-profile-theme-active .profile-header-details,
+body.ropro-profile-theme-active .profile-header-social-counts,
+body.ropro-profile-theme-active .profile-header-names,
+body.ropro-profile-theme-active .description-content,
+body.ropro-profile-theme-active .user-profile-header .more-btn {
+	padding-left: 24px !important;
+	padding-right: 24px !important;
+	box-sizing: border-box;
+}
+
+body.ropro-profile-theme-active .profile-tab-content {
+	padding-bottom: 24px !important;
+}
+
+body.ropro-profile-theme-active .profile-currently-wearing {
+	padding-bottom: 18px !important;
+}
+
+body.ropro-profile-theme-active #container-main {
+	margin-bottom: 72px !important;
+	position: relative;
+}
+
+@media (max-width: 767px) {
+	body.ropro-profile-theme-active #container-main > div:first-child {
+		padding: 18px 16px 22px !important;
+	}
+	body.ropro-profile-theme-active .user-profile-header,
+	body.ropro-profile-theme-active .profile-tabs,
+	body.ropro-profile-theme-active .profile-tab-content,
+	body.ropro-profile-theme-active .profile-header-details,
+	body.ropro-profile-theme-active .profile-header-social-counts,
+	body.ropro-profile-theme-active .profile-header-names,
+	body.ropro-profile-theme-active .description-content {
+		padding-left: 16px !important;
+		padding-right: 16px !important;
+	}
+	body.ropro-profile-theme-active #container-main {
+		margin-bottom: 56px !important;
+	}
+}

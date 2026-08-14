@@ -1,0 +1,193 @@
+/* The Modal (background) */
+.upgrade-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .upgrade-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .upgrade-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .upgrade-modal-close:hover,
+  .upgrade-modal-close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* Modal Header */
+.upgrade-modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Modal Body */
+  .upgrade-modal-body {padding: 2px 16px;}
+  
+  /* Modal Footer */
+  .upgrade-modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Modal Content */
+  .upgrade-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {transform: translateY(-300px); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+  }
+
+  #myGlower {
+    background-color: #ccc;
+    border: 2px solid transparent;    
+    -webkit-transition: border 0.1s linear, box-shadow 0.1s linear;
+       -moz-transition: border 0.1s linear, box-shadow 0.1s linear;
+            transition: border 0.1s linear, box-shadow 0.1s linear;
+}
+
+.ropro-verify-info:hover .ropro-verify-info-tooltip {
+  display: block!important;
+}
+
+.ropro-roblox-connection-button:hover .ropro-roblox-connection-unavailable-text {
+  opacity: 100%!important;
+  transition: opacity 0.5s!important;
+}
+
+.ropro-roblox-connection-button:hover .ropro-roblox-connection-button-image {
+  filter: blur(10px)!important;
+  transition: filter 0.5s!important;
+}
+
+.ropro-most-played-loader-item {
+  list-style: none;
+  width: 100% !important;
+  max-width: none !important;
+  flex: 0 0 100% !important;
+  float: none !important;
+  min-height: 195px;
+  height: 195px;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.ropro-most-played-loader {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.ropro-most-played-loader-ring {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 0;
+  background-color: #3b3e44;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18) inset;
+  position: relative;
+}
+
+.ropro-most-played-loader-spin {
+  width: 19px;
+  height: 19px;
+  display: block;
+  filter: brightness(0) invert(1);
+  animation: ropro-home-most-played-spin 0.8s linear infinite;
+}
+
+.ropro-most-played-loader-logo {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  box-shadow: 0 0 0 2px #3b3e44;
+}
+
+.ropro-most-played-loader-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  opacity: 0.84;
+}
+
+.light-theme .ropro-most-played-loader-ring {
+  background-color: #4a4f57;
+}
+
+.light-theme .ropro-most-played-loader-logo {
+  box-shadow: 0 0 0 2px #4a4f57;
+}
+
+@keyframes ropro-home-most-played-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ropro-most-played-loader-spin {
+    animation: none;
+  }
+}
+
+.light-theme #roproVerifyButton {
+  color: #393b3d;
+}
+
+.light-theme #timeLabel {
+  color: #393b3d;
+}
