@@ -8,7 +8,7 @@
 
 
 
-dm me on discord @fishy_09145 if anything breaks or gets patched.
+dm me on discord @rui.k if anything breaks or gets patched.
 
 
 ![App Screenshot](https://github.com/rastarui/ropro-ultra-tier/blob/main/images/Screenshot%20(863).png)
