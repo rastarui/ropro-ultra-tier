@@ -1,15 +1,5 @@
 //RoPro v1.7
 
-import { initSettings } from "./js/background/settings.js";
-
-chrome.runtime.onInstalled.addListener(() => {
-  initSettings();
-});
-
-chrome.runtime.onStartup.addListener(() => {
-  initSettings();
-});
-
 function getStorage(key) {
   return new Promise((resolve) => {
     chrome.storage.sync.get(key, function (obj) {

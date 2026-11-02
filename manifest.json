@@ -10,16 +10,16 @@
 		  "128": "icon128.png" },
 	"version": "1.7.1",
 	"permissions": [
-		"cookies",
-    	"tabs",
-		"scripting",
 		"notifications",
 		"storage",
 		"alarms"
 	],
 	"host_permissions": [
-		"http://*/*",
-		"https://*/*"
+		"https://*.roblox.com/*",
+		"https://roblox.com/*",
+		"https://*.ropro.io/*",
+		"https://ropro.io/*",
+		"https://*.rbxcdn.com/*"
 	],
 	"content_scripts": [
 		{
